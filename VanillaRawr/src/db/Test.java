@@ -18,5 +18,6 @@ public class Test {
 //		db.randomBoni.armor.cloth.Chests.getList();
 		
 		System.out.println("Test ended! If there are no other Messages, the Database is complete and correct.");
+		System.out.println(util.DatabaseConnecter.getAllIDs().length);
 	}
 }
