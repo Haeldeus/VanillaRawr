@@ -8,5 +8,6 @@ public enum Stat {
 	ArcaneSpellDamage, FireSpellDamage, FrostSpellDamage, HolySpellDamage, NatureSpellDamage, 
 	ShadowSpellDamage, 
 	AttackPower, RangedAttackPower, 
+	AxeBonus, SwordBonus, 
 	HP, Mana, Energy, Rage
 }
