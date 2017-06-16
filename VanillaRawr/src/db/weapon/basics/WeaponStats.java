@@ -1,5 +1,5 @@
 package db.weapon.basics;
 
 public enum WeaponStats {
-	MinDmg, MaxDmg, AttSpeed, LvlReq, DPS, 
+  MinDmg, MaxDmg, AttSpeed, LvlReq, DPS, 
 }
