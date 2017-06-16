@@ -2,7 +2,6 @@ package db.random.armor.cloth;
 
 import java.util.ArrayList;
 
-import db.stats.Stat;
 import util.MultiBonus;
 
 public class Chest {
