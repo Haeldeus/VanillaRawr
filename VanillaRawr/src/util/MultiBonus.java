@@ -174,12 +174,29 @@ public class MultiBonus {
         createSubTree(Stat.Spirit, lower, upper), chance));
   }
   
+  //Special Trees
+  public void createRestorationTree(int stamina, int spellPower, int mpFive, double chance) {
+	  addToList(createTripleTree(" of Restoration", createSubTree(Stat.Stamina, 
+			  stamina, stamina), createSubTree(Stat.SpellPower, spellPower, spellPower), 
+			  createSubTree(Stat.ManaPerFive, mpFive, mpFive), chance));
+  }
+  
+  public void createSorceryTree(int stamina, int intellect, int spellPower, double chance) {
+	  addToList(createTripleTree(" of Sorcery", createSubTree(Stat.Stamina, 
+			  stamina, stamina), createSubTree(Stat.Intellect, intellect, intellect), 
+			  createSubTree(Stat.SpellPower, spellPower, spellPower), chance));
+  }
+  
   private SubTree createSubTree(Stat attribute, int lower, int upper) {
     return new SubTree(name, attribute, lower, upper);
   }
   
   private Tree createTree(String modName, SubTree left, SubTree right, double dropChance) {
-    return new Tree(modName, left, right, dropChance);
+    return new Tree(modName, left, null, right, dropChance);
+  }
+  
+  private Tree createTripleTree(String modName, SubTree left, SubTree middle, SubTree right, double dropChance) {
+	  return new Tree(modName, left, middle, right, dropChance);
   }
   
   private void addToList(Tree mod) {
@@ -206,7 +223,11 @@ public class MultiBonus {
     for (int i = 0; i < boni.size(); i++) {
       Tree t = boni.get(i);
       SubTree left = t.getLeft();
+      SubTree middle = null;
       SubTree right = null;
+      if (t.getMiddle() != null) {
+    	  middle = t.getMiddle();
+      }
       if (t.getRight() != null) {
         right = t.getRight();
       }
@@ -215,6 +236,14 @@ public class MultiBonus {
             + ") " + left.getAttribute());
       } else {
         res = res.concat(name + t.getName() + ": +" + left.getLower() + " " + left.getAttribute()); 
+      }
+      if (middle != null) {
+          if (middle.getLower() != middle.getUpper()) {
+            res = res.concat(", +(" + middle.getLower() + "-" + middle.getUpper() + ") " 
+                + middle.getAttribute());
+          } else {
+            res = res.concat(", +" + middle.getLower() + " " + middle.getAttribute());
+          }
       }
       if (right != null) {
         if (right.getLower() != right.getUpper()) {

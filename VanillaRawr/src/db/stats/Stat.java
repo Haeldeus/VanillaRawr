@@ -9,5 +9,6 @@ public enum Stat {
 	ShadowSpellDamage, 
 	AttackPower, RangedAttackPower, 
 	AxeBonus, SwordBonus, 
+	ManaPerFive, 
 	HP, Mana, Energy, Rage
 }
