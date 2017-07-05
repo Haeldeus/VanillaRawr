@@ -7,7 +7,9 @@ public class MultiBonus {
 
   private final String name;
   private final int id;
-  private ArrayList<Tree> boni; 
+  private ArrayList<Tree> boni;
+  private Stat defaultBonus;
+  private int amountBonus;
   
   /**
    * Creates a new MultiBonus with the given name for the Item with the given ID.
@@ -22,6 +24,8 @@ public class MultiBonus {
   
   public void addDefaultBonus(Stat stat, int amount) {
     //TODO implement default bonus
+	defaultBonus = stat;
+	amountBonus = amount;
   }
   
   //Methods for creating single-Bonus Trees
@@ -192,11 +196,11 @@ public class MultiBonus {
   }
   
   private Tree createTree(String modName, SubTree left, SubTree right, double dropChance) {
-    return new Tree(modName, left, null, right, dropChance);
+    return new Tree(modName, left, null, right, defaultBonus, amountBonus, dropChance);
   }
   
   private Tree createTripleTree(String modName, SubTree left, SubTree middle, SubTree right, double dropChance) {
-	  return new Tree(modName, left, middle, right, dropChance);
+	  return new Tree(modName, left, middle, right, defaultBonus, amountBonus, dropChance);
   }
   
   private void addToList(Tree mod) {
@@ -222,6 +226,8 @@ public class MultiBonus {
     double chance = 0.0;
     for (int i = 0; i < boni.size(); i++) {
       Tree t = boni.get(i);
+      db.stats.Stat defaultBonus = t.getDefaultBonus();
+      int amount = t.getDefaultAmount();
       SubTree left = t.getLeft();
       SubTree middle = null;
       SubTree right = null;
@@ -232,10 +238,19 @@ public class MultiBonus {
         right = t.getRight();
       }
       if (left.getLower() != left.getUpper()) {
-        res = res.concat(name + t.getName() + ": +(" + left.getLower() + "-" + left.getUpper() 
-            + ") " + left.getAttribute());
+    	if (defaultBonus == null) {
+          res = res.concat(name + t.getName() + ": +(" + left.getLower() + "-" + left.getUpper() 
+              + ") " + left.getAttribute());
+    	} else {
+    	  res = res.concat(name + t.getName() + ": +" + amount + " " + defaultBonus + ", +(" 
+    	      + left.getLower() + "-" + left.getUpper() + ") " + left.getAttribute());
+    	}
       } else {
-        res = res.concat(name + t.getName() + ": +" + left.getLower() + " " + left.getAttribute()); 
+    	if (defaultBonus == null) {
+          res = res.concat(name + t.getName() + ": +" + left.getLower() + " " + left.getAttribute()); 
+    	} else {
+    		res = res.concat(name + t.getName() + ": +" + amount + " " + defaultBonus + ", +" + left.getLower() + " " + left.getAttribute()); 
+    	}
       }
       if (middle != null) {
           if (middle.getLower() != middle.getUpper()) {
