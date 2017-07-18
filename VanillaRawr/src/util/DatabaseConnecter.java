@@ -103,15 +103,15 @@ public class DatabaseConnecter {
     int[] totem = db.armor.relics.Totem.getIDs();
     list.add(totem);
     
-    int[] ohAxe = db.weapon.oneHanded.Axe.getIDs();
+    int[] ohAxe = db.weapon.onehanded.Axe.getIDs();
     list.add(ohAxe);
-    int[] ohDagger = db.weapon.oneHanded.Dagger.getIDs();
+    int[] ohDagger = db.weapon.onehanded.Dagger.getIDs();
     list.add(ohDagger);
-    int[] ohFist = db.weapon.oneHanded.Fist.getIDs();
+    int[] ohFist = db.weapon.onehanded.Fist.getIDs();
     list.add(ohFist);
-    int[] ohMace = db.weapon.oneHanded.Mace.getIDs();
+    int[] ohMace = db.weapon.onehanded.Mace.getIDs();
     list.add(ohMace);
-    int[] ohSword = db.weapon.oneHanded.Sword.getIDs();
+    int[] ohSword = db.weapon.onehanded.Sword.getIDs();
     list.add(ohSword);
     
     int[] bow = db.weapon.ranged.Bow.getIDs();
@@ -125,15 +125,15 @@ public class DatabaseConnecter {
     int[] wand = db.weapon.ranged.Wand.getIDs();
     list.add(wand);
     
-    int[] thAxe = db.weapon.twoHanded.Axe.getIDs();
+    int[] thAxe = db.weapon.twohanded.Axe.getIDs();
     list.add(thAxe);
-    int[] thMace = db.weapon.twoHanded.Mace.getIDs();
+    int[] thMace = db.weapon.twohanded.Mace.getIDs();
     list.add(thMace);
-    int[] thPolearm = db.weapon.twoHanded.Polearm.getIDs();
+    int[] thPolearm = db.weapon.twohanded.Polearm.getIDs();
     list.add(thPolearm);
-    int[] thStaff = db.weapon.twoHanded.Staff.getIDs();
+    int[] thStaff = db.weapon.twohanded.Staff.getIDs();
     list.add(thStaff);
-    int[] thSword = db.weapon.twoHanded.Sword.getIDs();
+    int[] thSword = db.weapon.twohanded.Sword.getIDs();
     list.add(thSword);
     
     int[] result;
@@ -270,15 +270,15 @@ public class DatabaseConnecter {
     String[] totem = db.armor.relics.Totem.getNames();
     list.add(totem);
     
-    String[] ohAxe = db.weapon.oneHanded.Axe.getNames();
+    String[] ohAxe = db.weapon.onehanded.Axe.getNames();
     list.add(ohAxe);
-    String[] ohDagger = db.weapon.oneHanded.Dagger.getNames();
+    String[] ohDagger = db.weapon.onehanded.Dagger.getNames();
     list.add(ohDagger);
-    String[] ohFist = db.weapon.oneHanded.Fist.getNames();
+    String[] ohFist = db.weapon.onehanded.Fist.getNames();
     list.add(ohFist);
-    String[] ohMace = db.weapon.oneHanded.Mace.getNames();
+    String[] ohMace = db.weapon.onehanded.Mace.getNames();
     list.add(ohMace);
-    String[] ohSword = db.weapon.oneHanded.Sword.getNames();
+    String[] ohSword = db.weapon.onehanded.Sword.getNames();
     list.add(ohSword);
     
     String[] bow = db.weapon.ranged.Bow.getNames();
@@ -292,15 +292,15 @@ public class DatabaseConnecter {
     String[] wand = db.weapon.ranged.Wand.getNames();
     list.add(wand);
     
-    String[] thAxe = db.weapon.twoHanded.Axe.getNames();
+    String[] thAxe = db.weapon.twohanded.Axe.getNames();
     list.add(thAxe);
-    String[] thMace = db.weapon.twoHanded.Mace.getNames();
+    String[] thMace = db.weapon.twohanded.Mace.getNames();
     list.add(thMace);
-    String[] thPolearm = db.weapon.twoHanded.Polearm.getNames();
+    String[] thPolearm = db.weapon.twohanded.Polearm.getNames();
     list.add(thPolearm);
-    String[] thStaff = db.weapon.twoHanded.Staff.getNames();
+    String[] thStaff = db.weapon.twohanded.Staff.getNames();
     list.add(thStaff);
-    String[] thSword = db.weapon.twoHanded.Sword.getNames();
+    String[] thSword = db.weapon.twohanded.Sword.getNames();
     list.add(thSword);
     
     String[] result;
@@ -424,15 +424,15 @@ public class DatabaseConnecter {
     String[] totem = db.armor.relics.Totem.getIcons();
     list.add(totem);
     
-    String[] ohAxe = db.weapon.oneHanded.Axe.getIcons();
+    String[] ohAxe = db.weapon.onehanded.Axe.getIcons();
     list.add(ohAxe);
-    String[] ohDagger = db.weapon.oneHanded.Dagger.getIcons();
+    String[] ohDagger = db.weapon.onehanded.Dagger.getIcons();
     list.add(ohDagger);
-    String[] ohFist = db.weapon.oneHanded.Fist.getIcons();
+    String[] ohFist = db.weapon.onehanded.Fist.getIcons();
     list.add(ohFist);
-    String[] ohMace = db.weapon.oneHanded.Mace.getIcons();
+    String[] ohMace = db.weapon.onehanded.Mace.getIcons();
     list.add(ohMace);
-    String[] ohSword = db.weapon.oneHanded.Sword.getIcons();
+    String[] ohSword = db.weapon.onehanded.Sword.getIcons();
     list.add(ohSword);
     
     String[] bow = db.weapon.ranged.Bow.getIcons();
@@ -446,15 +446,15 @@ public class DatabaseConnecter {
     String[] wand = db.weapon.ranged.Wand.getIcons();
     list.add(wand);
     
-    String[] thAxe = db.weapon.twoHanded.Axe.getIcons();
+    String[] thAxe = db.weapon.twohanded.Axe.getIcons();
     list.add(thAxe);
-    String[] thMace = db.weapon.twoHanded.Mace.getIcons();
+    String[] thMace = db.weapon.twohanded.Mace.getIcons();
     list.add(thMace);
-    String[] thPolearm = db.weapon.twoHanded.Polearm.getIcons();
+    String[] thPolearm = db.weapon.twohanded.Polearm.getIcons();
     list.add(thPolearm);
-    String[] thStaff = db.weapon.twoHanded.Staff.getIcons();
+    String[] thStaff = db.weapon.twohanded.Staff.getIcons();
     list.add(thStaff);
-    String[] thSword = db.weapon.twoHanded.Sword.getIcons();
+    String[] thSword = db.weapon.twohanded.Sword.getIcons();
     list.add(thSword);
     
     String[] result;

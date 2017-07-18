@@ -15,6 +15,7 @@ public class MultiBonus {
    * Creates a new MultiBonus with the given name for the Item with the given ID.
    * @param name  The Name of the MultiBonus.
    * @param id  The ID of the Item, this MultiBonus is part of.
+   * @since 1.0
    */
   public MultiBonus(String name, int id) {
     this.name = name;
@@ -22,10 +23,16 @@ public class MultiBonus {
     boni = new ArrayList<Tree>();
   }
   
+  /**
+   * Adds the given Stat as default Bonus for this Item.
+   * @param stat  The {@link Stat}, this Item gives as default Bonus.
+   * @param amount  The amount of Bonus, this Item gives as default.
+   * @since 1.0
+   */
   public void addDefaultBonus(Stat stat, int amount) {
     //TODO implement default bonus
-	defaultBonus = stat;
-	amountBonus = amount;
+    defaultBonus = stat;
+    amountBonus = amount;
   }
   
   //Methods for creating single-Bonus Trees
@@ -179,16 +186,32 @@ public class MultiBonus {
   }
   
   //Special Trees
+  /**
+   * Adds a Restoration-Tree to the List of Boni.
+   * @param stamina  The amount of Stamina, this Tree adds.
+   * @param spellPower  The amount of SpellPower, this Tree adds.
+   * @param mpFive  The amount of Mana per Five Seconds, this Tree adds.
+   * @param chance  The chance, that the Item drops with this Tree as Stats.
+   * @since 1.0
+   */
   public void createRestorationTree(int stamina, int spellPower, int mpFive, double chance) {
-	  addToList(createTripleTree(" of Restoration", createSubTree(Stat.Stamina, 
-			  stamina, stamina), createSubTree(Stat.SpellPower, spellPower, spellPower), 
-			  createSubTree(Stat.ManaPerFive, mpFive, mpFive), chance));
+    addToList(createTripleTree(" of Restoration", createSubTree(Stat.Stamina, 
+        stamina, stamina), createSubTree(Stat.SpellPower, spellPower, spellPower), 
+        createSubTree(Stat.ManaPerFive, mpFive, mpFive), chance));
   }
   
+  /**
+   * Adds a Sorcery-Tree to the List of Boni.
+   * @param stamina  The amount of Stamina, this Tree adds.
+   * @param intellect  The amount of Intellect, this Tree adds.
+   * @param spellPower  The amount of SpellPower, this Tree adds.
+   * @param chance  The chance, that the Item drops with this Tree as Stats.
+   * @since 1.0
+   */
   public void createSorceryTree(int stamina, int intellect, int spellPower, double chance) {
-	  addToList(createTripleTree(" of Sorcery", createSubTree(Stat.Stamina, 
-			  stamina, stamina), createSubTree(Stat.Intellect, intellect, intellect), 
-			  createSubTree(Stat.SpellPower, spellPower, spellPower), chance));
+    addToList(createTripleTree(" of Sorcery", createSubTree(Stat.Stamina, 
+        stamina, stamina), createSubTree(Stat.Intellect, intellect, intellect), 
+        createSubTree(Stat.SpellPower, spellPower, spellPower), chance));
   }
   
   private SubTree createSubTree(Stat attribute, int lower, int upper) {
@@ -199,8 +222,9 @@ public class MultiBonus {
     return new Tree(modName, left, null, right, defaultBonus, amountBonus, dropChance);
   }
   
-  private Tree createTripleTree(String modName, SubTree left, SubTree middle, SubTree right, double dropChance) {
-	  return new Tree(modName, left, middle, right, defaultBonus, amountBonus, dropChance);
+  private Tree createTripleTree(String modName, SubTree left, SubTree middle, 
+      SubTree right, double dropChance) {
+    return new Tree(modName, left, middle, right, defaultBonus, amountBonus, dropChance);
   }
   
   private void addToList(Tree mod) {
@@ -232,33 +256,35 @@ public class MultiBonus {
       SubTree middle = null;
       SubTree right = null;
       if (t.getMiddle() != null) {
-    	  middle = t.getMiddle();
+        middle = t.getMiddle();
       }
       if (t.getRight() != null) {
         right = t.getRight();
       }
       if (left.getLower() != left.getUpper()) {
-    	if (defaultBonus == null) {
+        if (defaultBonus == null) {
           res = res.concat(name + t.getName() + ": +(" + left.getLower() + "-" + left.getUpper() 
               + ") " + left.getAttribute());
-    	} else {
-    	  res = res.concat(name + t.getName() + ": +" + amount + " " + defaultBonus + ", +(" 
-    	      + left.getLower() + "-" + left.getUpper() + ") " + left.getAttribute());
-    	}
+        } else {
+          res = res.concat(name + t.getName() + ": +" + amount + " " + defaultBonus + ", +(" 
+            + left.getLower() + "-" + left.getUpper() + ") " + left.getAttribute());
+        }
       } else {
-    	if (defaultBonus == null) {
-          res = res.concat(name + t.getName() + ": +" + left.getLower() + " " + left.getAttribute()); 
-    	} else {
-    		res = res.concat(name + t.getName() + ": +" + amount + " " + defaultBonus + ", +" + left.getLower() + " " + left.getAttribute()); 
-    	}
+        if (defaultBonus == null) {
+          res = res.concat(name + t.getName() + ": +" + left.getLower() + " " 
+              + left.getAttribute()); 
+        } else {
+          res = res.concat(name + t.getName() + ": +" + amount + " " 
+              + defaultBonus + ", +" + left.getLower() + " " + left.getAttribute()); 
+        }
       }
       if (middle != null) {
-          if (middle.getLower() != middle.getUpper()) {
-            res = res.concat(", +(" + middle.getLower() + "-" + middle.getUpper() + ") " 
+        if (middle.getLower() != middle.getUpper()) {
+          res = res.concat(", +(" + middle.getLower() + "-" + middle.getUpper() + ") " 
                 + middle.getAttribute());
-          } else {
-            res = res.concat(", +" + middle.getLower() + " " + middle.getAttribute());
-          }
+        } else {
+          res = res.concat(", +" + middle.getLower() + " " + middle.getAttribute());
+        }
       }
       if (right != null) {
         if (right.getLower() != right.getUpper()) {

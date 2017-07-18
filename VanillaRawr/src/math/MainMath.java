@@ -7,12 +7,12 @@ import util.Item;
 
 public class MainMath {
 
-	private static int getMana(/*TODO*/) {
-		
-		return 0;
-	}
-	
-	public static void doMath(ArrayList<Item> items, int[] talents, util.Class c) {
-		getMana();
-	}
+  private static int getMana(/*TODO*/) {
+    
+    return 0;
+  }
+  
+  public static void doMath(ArrayList<Item> items, int[] talents, util.Class c) {
+    getMana();
+  }
 }

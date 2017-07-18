@@ -16,15 +16,27 @@ public class Tree {
    * drop dropChance.
    * @param name  The Name of the Tree.
    * @param left  The {@link SubTree}, that is the left Child of this Tree.
-   * @param right  The {@link SubTree}, that is the right Child of this Tree.
    * @param middle The {@link SubTree}, that is the middle Child of this Tree.
+   * @param right  The {@link SubTree}, that is the right Child of this Tree.
    * @param dropChance  The Chance, that the Item drops with this MultiBonus.
    * @since 1.0
    */
   public Tree(String name, SubTree left, SubTree middle, SubTree right, double dropChance) {
-	this(name, left, middle, right, null, 0, dropChance);
+  this(name, left, middle, right, null, 0, dropChance);
   }
   
+  /**
+   * Creates a new Tree of the given Name with the given SubTrees lefts and right and the chance to 
+   * drop dropChance.
+   * @param name  The Name of the Tree.
+   * @param left  The {@link SubTree}, that is the left Child of this Tree.
+   * @param middle The {@link SubTree}, that is the middle Child of this Tree.
+   * @param right  The {@link SubTree}, that is the right Child of this Tree.
+   * @param defaultBonus  The {@link Stat}, that is given as default for this Item.
+   * @param amount  The amount of Bonus, the default Bonus for this Item gives.
+   * @param dropChance  The Chance, that the Item drops with this MultiBonus.
+   * @since 1.0
+   */
   public Tree(String name, SubTree left, SubTree middle, SubTree right, Stat defaultBonus, 
         int amount, double dropChance) {
     this.name = name;
@@ -41,7 +53,7 @@ public class Tree {
   }
   
   public SubTree getMiddle() {
-	  return middle;
+    return middle;
   }
   
   public double getDropChance() {
@@ -57,10 +69,10 @@ public class Tree {
   }
   
   public Stat getDefaultBonus() {
-	  return defaultBonus;
+    return defaultBonus;
   }
   
   public int getDefaultAmount() {
-	  return defaultAmount;
+    return defaultAmount;
   }
 }

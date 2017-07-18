@@ -1,14 +1,14 @@
 package db.stats;
 
 public enum Stat {
-	Intellect, Spirit, Agility, Strength, Stamina, 
-	Armor, DefenseRating,
-	ArcaneResist, FireResist, FrostResist, HolyResist, NatureResist, ShadowResist,
-	SpellPower, SpellDamage, 
-	ArcaneSpellDamage, FireSpellDamage, FrostSpellDamage, HolySpellDamage, NatureSpellDamage, 
-	ShadowSpellDamage, 
-	AttackPower, RangedAttackPower, 
-	AxeBonus, SwordBonus, 
-	ManaPerFive, 
-	HP, Mana, Energy, Rage
+  Intellect, Spirit, Agility, Strength, Stamina, 
+  Armor, DefenseRating,
+  ArcaneResist, FireResist, FrostResist, HolyResist, NatureResist, ShadowResist,
+  SpellPower, SpellDamage, 
+  ArcaneSpellDamage, FireSpellDamage, FrostSpellDamage, HolySpellDamage, NatureSpellDamage, 
+  ShadowSpellDamage, 
+  AttackPower, RangedAttackPower, 
+  AxeBonus, SwordBonus, 
+  ManaPerFive, 
+  HP, Mana, Energy, Rage
 }
