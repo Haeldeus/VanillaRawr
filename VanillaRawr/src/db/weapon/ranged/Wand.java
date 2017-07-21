@@ -1,7 +1,19 @@
 package db.weapon.ranged;
 
+/**
+ * The Class, that is used to store all Wands and their Values to search for them in the 
+ * Database. The Values can be get by using the Methods {@link #getNames()}, {@link #getIDs()} and 
+ * {@link #getIcons()}.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Wand {
 
+  /**
+   * A Matrix, that stores every Wand and their Values, that are used to search for them in the 
+   * Database.
+   * @since 1.0
+   */
   private static Object[][] wands = {
     {19130, "INV_Wand_01", "Cold Snap"},
     {17077, "INV_Staff_13", "Crimson Shocker"},
