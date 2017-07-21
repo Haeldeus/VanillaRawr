@@ -3,13 +3,41 @@ package util;
 import db.stats.Stat;
 import java.util.HashMap;
 
+/**
+ * An abstract Class to define an Item. 
+ * @author Haeldeus
+ * @version 1.0
+ */
 public abstract class Item {
   
+  /**
+   * The name of the Item.
+   */
   private String name;
+  
+  /**
+   * The unique ID of this Item.
+   */
   private int id;
+  
+  /**
+   * The icon, that this Item uses.
+   */
   private String icon;
+  
+  /**
+   * The boolean value, if the Item is bound on pickup.
+   */
   private boolean bop;
+  
+  /**
+   * The boolean value, if this Item is part of a set.
+   */
   private boolean setItem;
+  
+  /**
+   * The {@link Stat}s, this Item provides when used.
+   */
   private HashMap<Stat, Integer> stats;
   
   /**
@@ -33,26 +61,57 @@ public abstract class Item {
     this.stats = stats;
   }
   
+  /**
+   * Returns the name of the Item.
+   * @return The name of the Item as a String.
+   * @since 1.0
+   */
   public String getName() {
     return name;
   }
   
+  /**
+   * Returns The ID of the Item.
+   * @return The ID of the Item as an Integer.
+   * @since 1.0 
+   */
   public int getId() {
     return id;
   }
   
+  /**
+   * Returns the Icon of the Item.
+   * @return The Icon of the Item as a String, that can be used to find this Icon inside the 
+   *     {@code \resources\}-Folder.
+   * @since 1.0
+   */
   public String getIcon() {
     return icon;
   }
   
-  public boolean getBop() {
+  /**
+   * Returns, if the Item is bound on pickup.
+   * @return {@code true}, if this Item is bound when picked up, {@code false} else.
+   * @since 1.0
+   */
+  public boolean isBop() {
     return bop;
   }
   
-  public boolean getSetItem() {
+  /**
+   * Returns, if the Item is part of a Set.
+   * @return {@code true}, if this Item is part of a Set, {@code false} else.
+   * @since 1.0
+   */
+  public boolean isSetItem() {
     return setItem;
   }
   
+  /**
+   * Returns the Stats, this Item provides when used.
+   * @return The Stats, this Item provides as a {@link HashMap} of {@link Stat}s and Integer.
+   * @since 1.0
+   */
   public HashMap<Stat, Integer> getStats() {
     return stats;
   }

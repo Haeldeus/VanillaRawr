@@ -2,6 +2,12 @@ package util;
 
 import java.util.ArrayList;
 
+/**
+ * A Class to get all Data from the Database. You can get all IDs, Names and Icons from their 
+ * respective Methods.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class DatabaseConnecter {
   
   /**
@@ -489,40 +495,107 @@ public class DatabaseConnecter {
     }
   }
   
-  private static int[] addArrayToArray(int[] arrayA, int[] arrayB, int startIndex) {
+  /**
+   * Adds a given Integer-Array {@code arrayB} to the given Integer-Array {@code arrayA}. The first 
+   * Element of {@code arrayB} will be at position {@code startIndex} in arrayA.
+   * @param arrayA The Array, where the other Array will be added to.
+   * @param arrayB The Array, that is added to {@code arrayA}.
+   * @param startIndex The index, where the first Element of {@code arrayB} will be added at.
+   * @return The Array {@code arrayA}, where {@code arrayB} was added to.
+   * @throws ArrayIndexOutOfBoundsException If arrayB was longer than the remaining space in arrayA.
+   * @since 1.0
+   */
+  private static int[] addArrayToArray(int[] arrayA, int[] arrayB, int startIndex) 
+      throws ArrayIndexOutOfBoundsException {
     for (int i : arrayB) {
-      arrayA[startIndex] = i;
-      startIndex++;
+      try {
+        arrayA[startIndex] = i;
+        startIndex++;
+      } catch (ArrayIndexOutOfBoundsException e) {
+        throw(e);
+      }
     }
     return arrayA;
   }
   
-  private static String[] addArrayToArray(String[] arrayA, String[] arrayB, int startIndex) {
+  /**
+   * Adds a given String-Array {@code arrayB} to the given String-Array {@code arrayA}. The first 
+   * Element of {@code arrayB} will be at position {@code startIndex} in ArrayA.
+   * @param arrayA The Array, where the other Array will be added to.
+   * @param arrayB The Array, that is added to {@code arrayA}.
+   * @param startIndex The index, where the first Element of {@code arrayB} will be added at.
+   * @return The Array {@code arrayA}, where {@code arrayB} was added to.
+   * @throws ArrayIndexOutOfBoundsException If arrayB was longer than the remaining space in arrayA.
+   * @since 1.0
+   */
+  private static String[] addArrayToArray(String[] arrayA, String[] arrayB, int startIndex) 
+      throws ArrayIndexOutOfBoundsException {
     for (String s : arrayB) {
-      arrayA[startIndex] = s;
-      startIndex++;
+      try {
+        arrayA[startIndex] = s;
+        startIndex++;
+      } catch (ArrayIndexOutOfBoundsException e) {
+        throw(e);
+      }
     }
     return arrayA;
   }
   
+  /**
+   * Adds the List of Integer-Arrays to the given Array.
+   * @param array The Integer-Array, where all Arrays will be added to.
+   * @param list The {@link ArrayList} of Integer-Arrays, that will be added to the given Array.
+   * @param arraySize Unused at this Time. Will be checked later.
+   * @return The given Array, where all other Arrays were added to.
+   * @since 1.0
+   */
   private static int[] addListToArray(int[] array, ArrayList<int[]> list, int arraySize) {
+    //TODO: Is arraySize needed in any way?
     int index = 0; 
     for (int[] i : list) {
-      addArrayToArray(array, i, index);
+      try {
+        addArrayToArray(array, i, index);
+      } catch (ArrayIndexOutOfBoundsException e) {
+        System.err.println(e.getStackTrace());
+        System.err.println("Array was to long to be added! Forcing exit....");
+        System.exit(0);
+      }
       index += i.length;
     }
     return array;
   }
   
+  /**
+   * Adds the List of String-Arrays to the given Array.
+   * @param array The String-Array, where all Arrays will be added to.
+   * @param list The {@link ArrayList} of String-Arrays, that will be added to the given Array.
+   * @param arraySize Unused at this Time. Will be checked later.
+   * @return The given Array, where all other Arrays were added to.
+   * @since 1.0
+   */
   private static String[] addListToArray(String[] array, ArrayList<String[]> list, int arraySize) {
     int index = 0; 
     for (String[] s : list) {
-      addArrayToArray(array, s, index);
+      try {
+        addArrayToArray(array, s, index);
+      } catch (ArrayIndexOutOfBoundsException e) {
+        System.err.println(e.getStackTrace());
+        System.err.println("Array was to long to be added! Forcing exit....");
+        System.exit(0);
+      }
       index += s.length;
     }
     return array;
   }
   
+  /**
+   * Checks, if all Items of the given List were added to the given array.
+   * @param arrayA The Array, that will be checked, if it's Elements are all the same as the Items 
+   *     in the given List.
+   * @param list The {@link ArrayList}, where all Items are stored in and that is used as Checksum.
+   * @return {@code true}, if all Items were added to the List, {@code false} else.
+   * @since 1.0
+   */
   private static boolean check(int[] arrayA, ArrayList<int[]> list) {
     boolean triggered = false;
     for (int[] i : list) {
@@ -543,6 +616,14 @@ public class DatabaseConnecter {
     return !triggered;
   }
 
+  /**
+   * Checks, if all Items of the given List were added to the given array.
+   * @param arrayA The Array, that will be checked, if it's Elements are all the same as the Items 
+   *     in the given List.
+   * @param list The {@link ArrayList}, where all Items are stored in and that is used as Checksum.
+   * @return {@code true}, if all Items were added to the List, {@code false} else.
+   * @since 1.0
+   */
   private static boolean check(String[] arrayA, ArrayList<String[]> list) {
     boolean triggered = false;
     for (String[] s : list) {
@@ -578,6 +659,16 @@ public class DatabaseConnecter {
     }
   }
         
+  /**
+   * Used for the Quicksort-Algorithm. Sorts the given Array of Integers from {@code start} to 
+   * {@code end}. Other possible entries will be ignored.
+   * @param x The Array, that will be sorted.
+   * @param start The index, where the Sorting will begin.
+   * @param end The index, to where the Sorting will be done.
+   * @return The index, to where the Array is sorted.
+   * @see #quickSort(int[], int, int)
+   * @since 1.0
+   */
   private static int partition(int[] x, int start, int end) {
     int help;
     int pivot = x[end];

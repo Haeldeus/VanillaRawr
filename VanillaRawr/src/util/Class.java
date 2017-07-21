@@ -1,7 +1,47 @@
 package util;
 
+/**
+ * An Enum to represent all Classes, that are available in the game.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public enum Class {
-    Mage, Priest, Warrior, Warlock, Rogue, Paladin, Hunter, Shaman, Druid
+    /**
+     * The Entry, that represents the Mage.
+     */
+    Mage, 
+    /**
+     * The Entry, that represents the Priest.
+     */
+    Priest, 
+    /**
+     * The Entry, that represents the Warrior.
+     */
+    Warrior, 
+    /**
+     * The Entry, that represents the Warlock.
+     */
+    Warlock, 
+    /**
+     * The Entry, that represents the Rogue.
+     */
+    Rogue, 
+    /**
+     * The Entry, that represents the Paladin.
+     */
+    Paladin, 
+    /**
+     * The Entry, that represents the Hunter.
+     */
+    Hunter, 
+    /**
+     * The Entry, that represents the Shaman.
+     */
+    Shaman,
+    /**
+     * The Entry, that represents the Druid.
+     */
+    Druid
 }
 
 // \t
