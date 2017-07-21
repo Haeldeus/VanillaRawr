@@ -12,9 +12,9 @@ public class Chest {
   
   private static int[] ids = {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
-    14172, 
+    14172, 14175, 14317, 
     /*ToDo*/
-    14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826, 
+    14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826, 
     9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
     14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
     10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
@@ -53,9 +53,49 @@ public class Chest {
     fillBonecastersShroud();
     fillBonecastersVest();
     fillBuccaneersRobes();
+    fillBuccaneersVest();
+    fillCelestialSilkRobes();
+    fillCelestialTunic();
     System.out.println(list.get(list.size() - 1));
   }
   
+  private static void fillCelestialTunic() {
+    int id = 14308;
+    MultiBonus celestialTunic = new MultiBonus("Celestial Tunic", id);
+  }
+
+  private static void fillCelestialSilkRobes() {
+    int id = 14317;
+    MultiBonus celestialSilkRobes = new MultiBonus("Celestial Silk Robes", id);
+    celestialSilkRobes.createArcaneWrathTree(39, 40, 7.7);
+    celestialSilkRobes.createFrozenWrathTree(39, 40, 8.9);
+    celestialSilkRobes.createIntellectTree(27, 28, 6.7);
+    celestialSilkRobes.createShadowWrathTree(39, 40, 8.8);
+    celestialSilkRobes.createSpiritTree(27, 28, 7.2);
+    celestialSilkRobes.createStaminaTree(27, 28, 6.1);
+    
+    celestialSilkRobes.createEagleTree(17, 18, 13.6);
+    celestialSilkRobes.createOwlTree(17, 18, 26.6);
+    celestialSilkRobes.createWhaleTree(17, 18, 14.4);
+    list.add(celestialSilkRobes);
+  }
+
+  private static void fillBuccaneersVest() {
+    int id = 14175;
+    MultiBonus buccaneersVest = new MultiBonus("Buccaneer's Vest", id);
+    buccaneersVest.createArcaneWrathTree(10, 11, 4.6);
+    buccaneersVest.createFrozenWrathTree(10, 11, 4.6);
+    buccaneersVest.createIntellectTree(7, 8, 11.9);
+    buccaneersVest.createShadowWrathTree(10, 11, 3.3);
+    buccaneersVest.createSpiritTree(7, 8, 7.6);
+    buccaneersVest.createStaminaTree(7, 8, 5.3);
+    
+    buccaneersVest.createEagleTree(4, 5, 15.2);
+    buccaneersVest.createOwlTree(4, 5, 33.5);
+    buccaneersVest.createWhaleTree(4, 5, 14.0);
+    list.add(buccaneersVest);
+  }
+
   private static void fillBuccaneersRobes() {
     int id = 14172;
     MultiBonus buccaneersRobes = new MultiBonus("Buccaneer's Robes", id);

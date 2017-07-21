@@ -1,4 +1,4 @@
-package db.weapon.oneHanded;
+package db.weapon.onehanded;
 
 public class Mace {
 
