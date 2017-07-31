@@ -402,6 +402,16 @@ public class MultiBonus {
         createSubTree(Stat.Strength, lower, upper), chance));
   }
   
+  /**
+   * Creates a {@link Tree} of the Tiger for this Item with the given Stat-borders, which may be 
+   * different to each other and the Chance, this Item comes with this Tree as a Bonus.
+   * @param lowerF The lower Border for the Agility Stat.
+   * @param upperF The upper Border for the Agility Stat.
+   * @param lowerS The lower Border for the Strength Stat.
+   * @param upperS The upper Border for the Strength Stat.
+   * @param chance The chance, that the Item has this Bonus.
+   * @since 1.0
+   */
   public void createTigerTreeDiff(int lowerF, int upperF, int lowerS, int upperS, double chance) {
     addToList(createTree(" of the Tiger", createSubTree(Stat.Agility, lowerF, upperF), 
         createSubTree(Stat.Strength, lowerS, upperS), chance));
@@ -463,32 +473,79 @@ public class MultiBonus {
         createSubTree(Stat.SpellPower, spellPower, spellPower), chance));
   }
   
+  /**
+   * Creates a new {@link SubTree} for this MultiBonus, that can be added to a {@link Tree}.
+   * @param attribute The Attribute, this SubTree defines.
+   * @param lower The lower Border of the Attribute.
+   * @param upper The upper Border of the Attribute.
+   * @return A new SubTree, that defines an Attribute with the given Borders.
+   * @since 1.0
+   */
   private SubTree createSubTree(Stat attribute, int lower, int upper) {
     return new SubTree(name, attribute, lower, upper);
   }
   
+  /**
+   * Creates a new {@link Tree}, with the given Attributes.
+   * @param modName The Name of this Tree (e.g. " of Strength", " of the Bear", etc.).
+   * @param left The {@link SubTree}, that defines the left Stat of this Tree.
+   * @param right The {@link SubTree}, that defines the right Stat of this Tree.
+   * @param dropChance The chance, the Item this Tree is added to comes with this Tree as Bonus.
+   * @return A new Tree with the given Attributes.
+   * @since 1.0
+   */
   private Tree createTree(String modName, SubTree left, SubTree right, double dropChance) {
     return new Tree(modName, left, null, right, defaultBonus, amountBonus, dropChance);
   }
   
+  /**
+   * Creates a {@link Tree} with 3 defining Stats and the given Attributes.
+   * @param modName The Name of this Tree (e.g. " of Strength", " of the Bear", etc.)
+   * @param left The {@link SubTree}, that defines the left Stat of this Tree.
+   * @param middle The {@link SubTree}, that defines the middle Stat of this Tree.
+   * @param right The {@link SubTree}, that defines the right Stat of this Tree.
+   * @param dropChance The chance, the Item this Tree is added to comes with this Tree as Bonus.
+   * @return A new Tree with the given Attributes.
+   * @since 1.0
+   */
   private Tree createTripleTree(String modName, SubTree left, SubTree middle, 
       SubTree right, double dropChance) {
     return new Tree(modName, left, middle, right, defaultBonus, amountBonus, dropChance);
   }
   
+  /**
+   * Adds the given {@link Tree} to the List of {@linkplain #boni}.
+   * @param mod The Tree to be added to the List.
+   * @see #boni
+   * @since 1.0
+   */
   private void addToList(Tree mod) {
     boni.add(mod);
   }
   
+  /**
+   * Returns the List of Boni, this Item may have.
+   * @return {@link #boni}.
+   * @since 1.0
+   */
   public ArrayList<Tree> getBoni() {
     return boni;
   }
   
+  /**
+   * Returns the Name of this Item.
+   * @return {@link #name}.
+   * @since 1.0
+   */
   public String getName() {
     return name;
   }
   
-
+  /**
+   * Returns the ID of this Item.
+   * @return {@link #id}.
+   * @since 1.0
+   */
   public int getId() {
     return id;
   }

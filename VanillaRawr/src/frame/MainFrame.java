@@ -37,20 +37,20 @@ import util.RightButtonsLayout;
  * The Class, which Objects will display the MainFrame of the Application. This Class also 
  * provides the Methods, to fill the Frame.
  * @author Haeldeus
- * @version 0.5
+ * @version 1.0
  */
 public class MainFrame {
   
   /**
    * The {@link JFrame}, that will display the Application's Frame.
-   * @since 0.5
+   * @since 1.0
    */
   private JFrame frame;
   
   /**
    * The {@link HashMap}, that stores the Buttons, that will display the Items of the 
    * Character.
-   * @since 0.5
+   * @since 1.0
    */
   private HashMap<String, JLabel> buttons;
   
@@ -59,7 +59,7 @@ public class MainFrame {
    * and sets the Basic Options for the Frame.
    * @param c  The Class of the Character, this Session will be about.
    * @see util.Class
-   * @since 0.5
+   * @since 1.0
    */
   public MainFrame(util.Class c) {
     frame = new JFrame();
@@ -69,7 +69,9 @@ public class MainFrame {
   }
   
   /**
-   * Sets the Frame visible.
+   * Sets the Frame visible and calls {@link #createContent(Container)} to initialize the Creation 
+   * of the Content to show.
+   * @since 1.0
    */
   public void show() {
     frame.setSize(1000, 740);
@@ -80,6 +82,14 @@ public class MainFrame {
     frame.setVisible(true);
   }
   
+  /**
+   * Adds the Content of this Window to the given {@link Container}.
+   * @param content The Container, the Content will be added to.
+   * @since 1.0
+   * @see #createMenu()
+   * @see #createMainContent(Container)
+   * @see #createBottom()
+   */
   private void createContent(Container content) {
     content.setLayout(new BorderLayout());
     content.add(createMenu(), BorderLayout.NORTH);
@@ -87,6 +97,15 @@ public class MainFrame {
     content.add(createBottom(), BorderLayout.SOUTH);
   }
   
+  /**
+   * Creates the Main Content of the Window. <br/>
+   * Adds the left Content and right Content to the main ContentPane, which is the middle one, 
+   * below the Menu and above the overall DPS Label.
+   * @param content The {@link Container}, the Content will be added to.
+   * @since 1.0
+   * @see #createLeftContent(Container)
+   * @see #createRightContent(Container)
+   */
   private void createMainContent(Container content) {
     Container mainContent = new Container();
     mainContent.setLayout(new BorderLayout(10,10));
@@ -120,11 +139,25 @@ public class MainFrame {
     mainContent.add(leftContent, BorderLayout.WEST);
   }
   
+  /**
+   * Determines, if the current Class needs Ammo and returns this boolean Value.
+   * @return  {@code true}, if the current Class needs Ammo, {@code false} else.
+   * @since 1.0
+   */
   private boolean needsAmmo() {
+    //TODO Implement this Method the correct way.
     return true;
   }
   
+  /**
+   * Determines, if the current Class may have a possible Enchantment on it's ranged Weapon and 
+   * returns this boolean Value.
+   * @return  {@code true}, if the Class has the Possibility to enchant it's ranged Weapon, {@code 
+   * false} else.
+   * @since 1.0
+   */
   private boolean hasRangedEnch() {
+    //TODO Implement this Method the correct way.
     return false;
   }
   
@@ -1378,6 +1411,12 @@ public class MainFrame {
     return menu;
   }
   
+  /**
+   * Creates a {@link JLabel}, that displays overall DPS at the Bottom of the Screen.
+   * @return  The JLabel, that will be placed at the Bottom of the Screen in the {@link 
+   * #createContent(Container)}-Method.
+   * @since 1.0
+   */
   private Component createBottom() {
     JLabel res = new JLabel("DPS:");
     res.setSize(frame.getContentPane().getWidth(), 10);
@@ -1386,6 +1425,11 @@ public class MainFrame {
     return res;
   }
   
+  /**
+   * Creates a new Frame with Mage as default Class.
+   * @param args Unused
+   * @since 1.0
+   */
   public static void main(String[] args) {
     new MainFrame(util.Class.Mage).show();
   }

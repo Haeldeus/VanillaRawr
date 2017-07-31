@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Hands in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Hands {
 
+  /**
+   * All Cloth-Hands stored as a Matrix of Objects. The Hands will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] hands = {
     {16801, "INV_Gauntlets_14", "Arcanist Gloves"},
     {21585, "INV_Gauntlets_17", "Dark Storm Gauntlets"},

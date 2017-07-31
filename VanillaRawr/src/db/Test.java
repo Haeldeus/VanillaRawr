@@ -1,5 +1,10 @@
 package db;
 
+/**
+ * A Class to Test the Database for consistency.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Test {
 
   /**

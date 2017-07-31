@@ -4,10 +4,23 @@ import java.util.ArrayList;
 
 import util.MultiBonus;
 
+/**
+ * A Class, that stores all Daggers with MultiBonus. They can be accessed by calling {@link 
+ * #getList()}.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Daggers {
 
+  /**
+   * A List, that saves every Dagger, that has a MultiBonus. These Items are saved as an {@link 
+   * ArrayList} of {@link MultiBonus}.
+   */
   private static ArrayList<MultiBonus> list;
   
+  /**
+   * The ID's of all Daggers with MultiBonus.
+   */
   private static int[] ids = {
     10828, 15241, 15247, 2140, 2819, 2632, 15243, 15246, 4088, 15242, 3184, 15244, 3187, 
     15245, 4571
@@ -17,6 +30,7 @@ public class Daggers {
    * Returns a List of all Daggers with Random Boni in the Game.
    * @return  An {@link ArrayList} of {@link MultiBonus}, that represents all Daggers with 
    *     Random Boni, that are available in the Game.
+   * @since 1.0
    */
   public static ArrayList<MultiBonus> getList() {
     if (list == null) {
@@ -25,10 +39,19 @@ public class Daggers {
     return list;
   }
   
+  /**
+   * Returns all ID's.
+   * @return The ID's of all Daggers as an Array of Integers.
+   * @since 1.0
+   */
   public static int[] getIDs() {
     return ids;
   }
   
+  /**
+   * Fills the {@link #list} with all Daggers, that have a MultiBonus.
+   * @since 1.0
+   */
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     fillDireNail();
@@ -46,37 +69,12 @@ public class Daggers {
     fillSacrificialKris();
     fillVorpalDagger();
     fillWarKnife();
-    /*System.out.println(list.get(0).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(1).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(2).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(3).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(4).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(5).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(6).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(7).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(8).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(9).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(10).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(11).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(12).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(13).toString());
-    System.out.println("----------------------------------------");
-    System.out.println(list.get(14).toString()); */
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=4571">War Knife</a> to the List.
+   * @since 1.0
+   */
   private static void fillWarKnife() {
     int id = 4571;
     MultiBonus warKnife = new MultiBonus("War Knife", id);
@@ -93,6 +91,10 @@ public class Daggers {
     list.add(warKnife);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15245">Vorpal Dagger</a> to the List.
+   * @since 1.0
+   */
   private static void fillVorpalDagger() {
     int id = 15245;
     MultiBonus vorpalDagger = new MultiBonus("Vorpal Dagger", id);
@@ -113,6 +115,10 @@ public class Daggers {
     list.add(vorpalDagger);
   }
 
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=3187">Sacrificial Kris</a> to the List.
+   * @since 1.0
+   */
   private static void fillSacrificialKris() {
     int id = 3187;
     MultiBonus sacrificialKris = new MultiBonus("Sacrificial Kris", id);
@@ -134,6 +140,10 @@ public class Daggers {
     
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15244">Razor Blade</a> to the List.
+   * @since 1.0
+   */
   private static void fillRazorBlade() {
     int id = 15244;
     MultiBonus razorBlade = new MultiBonus("Razor Blade", id);
@@ -154,6 +164,10 @@ public class Daggers {
     list.add(razorBlade);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=3184">Hook Dagger</a> to the List.
+   * @since 1.0
+   */
   private static void fillHookDagger() {
     int id = 3184;
     MultiBonus hookDagger = new MultiBonus("Hook Dagger", id);
@@ -169,6 +183,10 @@ public class Daggers {
     list.add(hookDagger);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15242">Honed Stiletto</a> to the List.
+   * @since 1.0
+   */
   private static void fillHonedStiletto() {
     int id = 15242;
     MultiBonus honedStiletto = new MultiBonus("Honed Stiletto", id);
@@ -189,6 +207,10 @@ public class Daggers {
     list.add(honedStiletto);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=4088">Dread Blade</a> to the List.
+   * @since 1.0
+   */
   private static void fillDreadBlade() {
     int id = 4088;
     MultiBonus dreadblade = new MultiBonus("Dreadblade", id);
@@ -209,6 +231,10 @@ public class Daggers {
     list.add(dreadblade);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15246">Demon Blade</a> to the List.
+   * @since 1.0
+   */
   private static void fillDemonBlade() {
     int id = 15246;
     MultiBonus demonBlade = new MultiBonus("Demon Blade", id);
@@ -229,6 +255,10 @@ public class Daggers {
     list.add(demonBlade);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15243">Deadly Kris</a> to the List.
+   * @since 1.0
+   */
   private static void fillDeadlyKris() {
     int id = 15243;
     MultiBonus deadlyKris = new MultiBonus("Deadly Kris", id);
@@ -249,6 +279,10 @@ public class Daggers {
     list.add(deadlyKris);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=2632">Curved Dagger</a> to the List.
+   * @since 1.0
+   */
   private static void fillCurvedDagger() {
     int id = 2632;
     MultiBonus curvedDagger = new MultiBonus("Curved Dagger", id);
@@ -265,6 +299,10 @@ public class Daggers {
     list.add(curvedDagger);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15241">Battle Knife</a> to the List.
+   * @since 1.0
+   */
   private static void fillBattleKnife() {
     int id = 15241;
     MultiBonus battleKnife = new MultiBonus("Battle Knife", id);
@@ -285,6 +323,10 @@ public class Daggers {
     list.add(battleKnife);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=2140">Carving Knife</a> to the List.
+   * @since 1.0
+   */
   private static void fillCarvingKnife() {
     int id = 2140;
     MultiBonus carvingKnife = new MultiBonus("Carving Knife", id);
@@ -302,6 +344,10 @@ public class Daggers {
     list.add(carvingKnife);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=2819">Cross Dagger</a> to the List.
+   * @since 1.0
+   */
   private static void fillCrossDagger() {
     int id = 2819;
     MultiBonus crossDagger = new MultiBonus("Cross Dagger", id);
@@ -322,6 +368,10 @@ public class Daggers {
     list.add(crossDagger);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15247">Bloodstrike Dagger</a> to the List.
+   * @since 1.0
+   */
   private static void fillBloodstrikeDagger() {
     int id = 15247;
     MultiBonus bloodstrikeDagger = new MultiBonus("Bloodstrike Dagger", id);
@@ -342,6 +392,10 @@ public class Daggers {
     list.add(bloodstrikeDagger);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=10828">Dire Nail</a> to the List.
+   * @since 1.0
+   */
   private static void fillDireNail() { //+5 Shadow Resistance on default!
     int id = 10828;
     MultiBonus direNail = new MultiBonus("Dire Nail", id);

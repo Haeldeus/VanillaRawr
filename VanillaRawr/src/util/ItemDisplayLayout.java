@@ -6,35 +6,75 @@ import java.awt.Dimension;
 import java.awt.LayoutManager;
 import java.util.HashMap;
 
+/**
+ * A {@link LayoutManager} for the Window, that will open when selecting an Item for the Character 
+ * Sheet. 
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class ItemDisplayLayout implements LayoutManager {
 
+  /**
+   * The final String to define the Label for the Icon.
+   */
   public static final String ICON = "Icon";
   
+  /**
+   * The final String to define a Label for the Name.
+   */
   public static final String NAME = "Name";
   
+  /**
+   * The final String to define the Label for the Attributes.
+   */
   public static final String ATTRIBUTES = "Attributes";
   
+  /**
+   * The final String to define a Label as the upper Border of an Icon.
+   */
   public static final String UPPER_BORDER = "Upper_Border";
   
+  /**
+   * The final String to define a Label as the right Border of an Icon.
+   */
   public static final String RIGHT_BORDER = "Right_Border";
   
+  /**
+   * The final String to define a Label as the left Border of an Icon.
+   */
   public static final String LEFT_BORDER = "Left_Border";
   
+  /**
+   * The final String to define a Label as the lower Border of an Icon.
+   */
   public static final String LOWER_BORDER = "Lower_Border";
   
+  /**
+   * All {@link Component}s, that were added to this Layout, saved in a {@link HashMap} of Strings 
+   * and {@link Component}s.
+   */
   private HashMap<String, Component> components;
   
+  /**
+   * The Constructor to initialize this Layout. Will create a new HashMap {@link #components}.
+   */
   public ItemDisplayLayout() {
     components = new HashMap<String, Component>();
   }
   
+  /**
+   * Checks, if the given String defines a Component. If yes, it returns {@code true}, 
+   * {@code false else}.
+   * @param key The String, that will be checked.
+   * @return {@code true}, if the given String defines a Component, {@code false} if not.
+   * @since 1.0
+   */
   private boolean isComponent(String key) {
     if (key.equals(ICON) || key.equals(NAME) || key.equals(ATTRIBUTES) || key.equals(UPPER_BORDER) 
         || key.equals(RIGHT_BORDER) || key.equals(LEFT_BORDER) || key.equals(LOWER_BORDER)) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
   
   @Override
@@ -127,6 +167,12 @@ public class ItemDisplayLayout implements LayoutManager {
     }
   }
   
+  /**
+   * Returns all components, that were added to this Layout.
+   * @return {@link #components}, a {@link HashMap} of Strings and {@link Component}s, that were 
+   *     added to this Layout.
+   * @since 1.0
+   */
   public HashMap<String, Component> getComponents() {
     return components;
   }

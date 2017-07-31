@@ -1,6 +1,22 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Shoulder in the game with Values to search their Stats 
+ * in the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Shoulder {
+  
+  /**
+   * All Cloth-Shoulders stored as a Matrix of Objects. The Shoulders will be saved in the 
+   * following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] shoulders = {
     {16797, "INV_Shoulder_02", "Arcanist Mantle"},
     {20176, "INV_Shoulder_24", "Defiler's Epaulets"},

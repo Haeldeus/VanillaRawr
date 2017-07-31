@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Wrist in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Wrist {
 
+  /**
+   * All Cloth-Wrists stored as a Matrix of Objects. The Wrists will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] wrists = {
     {16799, "INV_Belt_29", "Arcanist Bindings"},
     {22519, "INV_Bracer_13", "Bindings of Faith"},

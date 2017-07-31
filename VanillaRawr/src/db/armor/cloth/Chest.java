@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Chest in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Chest {
 
+  /**
+   * All Cloth-Chests stored as a Matrix of Objects. The Chests will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] chests = {
     {13314, "INV_Chest_Cloth_12", "Alanna's Embrace"},
     {16798, "INV_Chest_Cloth_03", "Arcanist Robes"},

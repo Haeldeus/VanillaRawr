@@ -9,8 +9,8 @@ public class SubTree {
     
   /**
    * Creates a SubTree of the given Attribute with the given lower and upper borders.
-   * @param name  The Name of the Bonus (Bear, Stamina, etc.)
-   * @param attribute  The attribute
+   * @param name  The Name of the Item (to check for possible Errors at the Item).
+   * @param attribute  The attribute.
    * @param lower  The lower border of possible Stats.
    * @param upper  The upper border of possible Stats.
    */

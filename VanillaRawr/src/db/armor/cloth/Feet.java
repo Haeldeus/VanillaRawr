@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Feet in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Feet {
 
+  /**
+   * All Cloth-Feet stored as a Matrix of Objects. The Items will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] feet = {
     {16800, "INV_Boots_07", "Arcanist Boots"},
     {19897, "INV_Boots_Cloth_09", "Betrayer's Boots"},

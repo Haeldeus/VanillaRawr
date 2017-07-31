@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Legs in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Legs {
   
+  /**
+   * All Cloth-Legs stored as a Matrix of Objects. The Legs will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] legs = {
     {16796, "INV_Pants_08", "Arcanist Leggings"},
     {21336, "INV_Pants_Cloth_02", "Doomcaller's Trousers"},

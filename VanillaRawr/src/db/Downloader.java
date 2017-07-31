@@ -9,8 +9,20 @@ import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * A Class to download the Database Pages from 
+ * <a href="db.vanillagaming.org/">Vanillagaming.org</a>, that contains Informations about the 
+ * needed Items.
+ * @author Haeldeus
+ * @since 1.0
+ */
 public class Downloader {
 
+  /**
+   * Downloads all Pages, that are about Items, that this Database needs.
+   * @param ids The ID's of all Items, or the Items to be downloaded.
+   * @since 1.0
+   */
   private static void getPages(int[] ids) {
     URL url;
     InputStream is = null;
@@ -55,9 +67,13 @@ public class Downloader {
     }
   }
   
+  /**
+   * The Main-Method to execute {@link #getPages(int[])}.
+   * @param args Unused.
+   * @since 1.0
+   */
   public static void main(String[] args) {
     int[] ids = util.DatabaseConnecter.getAllIDs();
     getPages(ids);
   }
-  
 }

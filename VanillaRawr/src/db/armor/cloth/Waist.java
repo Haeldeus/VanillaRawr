@@ -1,7 +1,21 @@
 package db.armor.cloth;
 
+/**
+ * The Class, that stores every single Cloth-Waist in the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Waist {
 
+  /**
+   * All Cloth-Waists stored as a Matrix of Objects. The Waists will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] waists = {
     {19388, "INV_Belt_13", "Angelista's Grasp"},
     {16802, "INV_Belt_30", "Arcanist Belt"},

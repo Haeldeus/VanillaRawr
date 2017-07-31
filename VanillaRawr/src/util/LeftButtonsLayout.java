@@ -6,46 +6,156 @@ import java.awt.Dimension;
 import java.awt.LayoutManager;
 import java.util.HashMap;
 
+/**
+ * The Layout for the Buttons on the left Side of the Character Sheet.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class LeftButtonsLayout implements LayoutManager {
 
+  /**
+   * The String, that defines the Label for the Head-Icon.
+   */
   public static final String head = "Head";
+  
+  /**
+   * The String, that defines the Label for the Head-Enchantment.
+   */
   public static final String headEnch = "HeadEnch";
+  
+  /**
+   * The String, that defines the Label for the Border of the Head-Icon.
+   */
   public static final String headBorder = "HeadBorder";
   
+  /**
+   * The String, that defines the Label for the Neck-Icon.
+   */
   public static final String neck = "Neck";
+  
+  /**
+   * The String, that defines the Label for the Border of the Neck-Icon.
+   */
   public static final String neckBorder = "NeckBorder";
   
+  /**
+   * The String, that defines the Label for the Shoulder-Icon.
+   */
   public static final String shoulder = "Shoulder";
+  
+  /**
+   * The String, that defines the Label for the Shoulder-Enchantment.
+   */
   public static final String shoulderEnch = "ShoulderEnch";
+  
+  /**
+   * The String, that defines the Label for the Border of the Shoulder-Icon.
+   */
   public static final String shoulderBorder = "ShoulderBorder";
   
+  /**
+   * The String, that defines the Label for the Cloak-Icon.
+   */
   public static final String cloak = "Cloak";
+  
+  /**
+   * The String, that defines the Label for the Cloak-Enchantment.
+   */
   public static final String cloakEnch = "CloakEnch";
+  
+  /**
+   * The String, that defines the Label for the Border of the Cloak-Icon.
+   */
   public static final String cloakBorder = "CloakBorder";
   
+  /**
+   * The String, that defines the Label for the Chest-Icon.
+   */
   public static final String chest = "Chest";
+  
+  /**
+   * The String, that defines the Label for the Chest-Enchantment.
+   */
   public static final String chestEnch = "ChestEnch";
+  
+  /**
+   * The String, that defines the Label for the Border of the Chest-Icon.
+   */
   public static final String chestBorder = "ChestBorder";
   
+  /**
+   * The String, that defines the Label for the Shirt-Icon.
+   */
   public static final String shirt = "Shirt";
+  
+  /**
+   * The String, that defines the Label for the Border of the Shirt-Icon.
+   */
   public static final String shirtBorder = "ShirtBorder";
   
+  /**
+   * The String, that defines the Label for the Tabard-Icon.
+   */
   public static final String tabard = "Tabard";
+  
+  /**
+   * The String, that defines the Label for the Border of the Tabard-Icon.
+   */
   public static final String tabardBorder = "TabardBorder";
   
+  /**
+   * The String, that defines the Label for the Bracer-Icon.
+   */
   public static final String bracer = "Bracer";
+  
+  /**
+   * The String, that defines the Label for the Bracer-Enchantment.
+   */
   public static final String bracerEnch = "BracerEnch";
+  
+  /**
+   * The String, that defines the Label for the Border of the Bracer-Icon.
+   */
   public static final String bracerBorder = "BracerBorder";
   
+  /**
+   * The {@link HashMap}, that saves all {@link Component}s, that were added to this Layout, with 
+   * their defining String as Key.
+   */
   private HashMap<String, Component> components;
   
+  /**
+   * The Constructor for this Layout. Creates a new {@link HashMap} for {@link #components}.
+   * @since 1.0
+   */
   public LeftButtonsLayout() {
     components = new HashMap<String, Component>();
   }
   
+  /**
+   * Checks, if the given String is a String, that defines a Component of this Layout.
+   * @param key The String to be checked.
+   * @return {@code true}, if the given String defines a Component, {@code false} else.
+   * @since 1.0
+   */
+  private boolean isComponent(String key) {
+    if (key.equals(head) || key.equals(headEnch) || key.equals(headBorder) || key.equals(neck) 
+        || key.equals(neckBorder) || key.equals(shoulder) || key.equals(shoulderEnch) 
+        || key.equals(shoulderBorder) || key.equals(cloak) || key.equals(cloakEnch) 
+        || key.equals(cloakBorder) || key.equals(chest) || key.equals(chestEnch) 
+        || key.equals(chestBorder) || key.equals(shirt) || key.equals(shirtBorder) 
+        || key.equals(tabard) || key.equals(tabardBorder) || key.equals(bracer) 
+        || key.equals(bracerEnch) || key.equals(bracerBorder)) {
+      return true;
+    }
+    return false;
+  }
+  
   @Override
-  public void addLayoutComponent(String arg0, Component arg1) {
-    components.put(arg0, arg1);
+  public void addLayoutComponent(String key, Component comp) {
+    if (isComponent(key)) {
+      components.put(key, comp);
+    }
   }
 
   @Override
@@ -124,20 +234,18 @@ public class LeftButtonsLayout implements LayoutManager {
 
   @Override
   public Dimension minimumLayoutSize(Container arg0) {
-    // TODO Auto-generated method stub
     return new Dimension(76,712);
   }
 
   @Override
   public Dimension preferredLayoutSize(Container arg0) {
-    // TODO Auto-generated method stub
     return new Dimension(76,712);
   }
 
   @Override
   public void removeLayoutComponent(Component arg0) {
-    // TODO Auto-generated method stub
-    
+    if (components.containsValue(arg0)) {
+      components.remove(arg0);
+    }
   }
-
 }
