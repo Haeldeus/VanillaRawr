@@ -6,27 +6,88 @@ import java.awt.Dimension;
 import java.awt.LayoutManager;
 import java.util.HashMap;
 
+/**
+ * The {@link LayoutManager}, that will determine, where the middle Buttons will be placed in the 
+ * Left Pane.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class MiddleLayout implements LayoutManager {
 
+  /**
+   * The String, that defines the Pane with the Tabs in it.
+   */
   public static final String tabPane = "tabPane"; 
   
+  /**
+   * The String, which defines the Label, that shows the Mainhand Icon.
+   */
   public static final String mainHand = "mainHand";
+  
+  /**
+   * The String, which defines the Label, that shows the possible Mainhand Enchantment.
+   */
   public static final String mainHandEnch = "mainHandEnch";
+  
+  /**
+   * The String, which defines the Label, that is used as the Border of the Mainhand Icon.
+   */
   public static final String mainHandBorder = "mainHandBorder";
   
+  /**
+   * The String, which defines the Label, that shows the Offhand Icon.
+   */
   public static final String offHand = "offHand";
+  
+  /**
+   * The String, which defines the Label, that shows the possible Offhand Enchantment.
+   */
   public static final String offHandEnch = "offHandEnch";
+  
+  /**
+   * The String, which defines the Label, that is used as the Border of the Offhand Icon.
+   */
   public static final String offHandBorder = "offHandBorder";
   
+  /**
+   * The String, which defines the Label, that shows the Ranged Weapon Icon.
+   */
   public static final String ranged = "ranged";
+  
+  /**
+   * The String, which defines the Label, that shows the possible Ranged Weapon Enchantment.
+   */
   public static final String rangedEnch = "rangedEnch";
+  
+  /**
+   * The String, which defines the Label, that is used as the Border of the Ranged Weapon.
+   */
   public static final String rangedBorder = "rangedBorder";
   
+  /**
+   * The String, which defines the Label, that shows the Ammo Icon.
+   */
   public static final String ammo = "ammo";
+  
+  /**
+   * The String, which defines the Label, that is used as the Border of the Ammo Icon.
+   */
   public static final String ammoBorder = "ammoBorder";
   
+  /**
+   * All components, that were added to this Layout, saved in a {@link HashMap} of Strings and 
+   * {@link Component}s.
+   */
   private HashMap<String, Component> components;
+  
+  /**
+   * Determines, if the Ammo Button has to be displayed.
+   */
   private boolean needsAmmo;
+  
+  /**
+   * Determines, if the current Class may have a ranged Enchantment.
+   */
   private boolean hasRangedEnch;
   
   /**
