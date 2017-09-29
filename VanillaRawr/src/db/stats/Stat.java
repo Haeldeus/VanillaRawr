@@ -154,5 +154,10 @@ public enum Stat {
   /**
    * The Entry, that represents the Ragepoints-Stat.
    */
-  Rage
+  Rage, 
+  
+  /**
+   * The Entry, that represents the Chance to Hit Stat.
+   */
+  HitChance
 }

@@ -93,6 +93,19 @@ public class MultiBonus {
   }
   
   /**
+   * Creates a {@link Tree} of Defense for this Item with the given Stat-borders and the chance, 
+   * this Item comes with this Bonus.
+   * @param lower  The lower border for this Tree.
+   * @param upper  The upper border for this Tree.
+   * @param chance  The chance, that the Item has this Bonus.
+   * @since 1.0
+   */
+  public void createDefenseTree(int lower, int upper, double chance) {
+    addToList(createTree(" of Defense", createSubTree(Stat.DefenseRating, lower, upper), null, 
+        chance));
+  }
+  
+  /**
    * Creates a {@link Tree} of Fiery Wrath for this Item with the given Stat-borders and the 
    * chance, this Item comes with this Bonus.
    * @param lower The lower border for this Tree.
@@ -468,9 +481,23 @@ public class MultiBonus {
    * @since 1.0
    */
   public void createSorceryTree(int stamina, int intellect, int spellPower, double chance) {
-    addToList(createTripleTree(" of Sorcery", createSubTree(Stat.Stamina, 
-        stamina, stamina), createSubTree(Stat.Intellect, intellect, intellect), 
-        createSubTree(Stat.SpellPower, spellPower, spellPower), chance));
+    addToList(createTripleTree(" of Sorcery", createSubTree(Stat.Stamina, stamina, stamina), 
+        createSubTree(Stat.Intellect, intellect, intellect), createSubTree(Stat.SpellPower, 
+            spellPower, spellPower), chance));
+  }
+  
+  /**
+   * Adds a Striking-Tree to the List of Boni.
+   * @param strength  The amount of Strength, this Tree adds.
+   * @param agility  The amount of Agility, this Tree adds.
+   * @param stamina  The amount of Stamina, this Tree adds. 
+   * @param chance  The chance, that the Item drops with this Tree as Stats.
+   * @since 1.0
+   */
+  public void createStrikingTree(int strength, int agility, int stamina, double chance) {
+    addToList(createTripleTree(" of Striking", createSubTree(Stat.Strength, strength, strength), 
+        createSubTree(Stat.Agility, agility, agility), createSubTree(Stat.Stamina, stamina, 
+            stamina), chance));
   }
   
   /**
