@@ -12,10 +12,10 @@ public class Chest {
   
   private static int[] ids = {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
-    14172, 14175, 14317, 
+    14172, 14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826,
+    9819, 10065, 
     /*ToDo*/
-    14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826, 
-    9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
+    10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
     14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
     10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
     7468, 14326, 14318, 14127, 14133, 9905, 9913, 6609, 6610, 6567, 6569, 9749, 9748, 9874, 
@@ -39,6 +39,7 @@ public class Chest {
   }
   
   private static void fill() {
+    System.err.println("Not all ID's built in yet, use with caution!");
     list = new ArrayList<MultiBonus>();
     fillAbjurersRobe();
     fillAbjurersTunic();
@@ -56,12 +57,226 @@ public class Chest {
     fillBuccaneersVest();
     fillCelestialSilkRobes();
     fillCelestialTunic();
+    fillConjurersRobe();
+    fillConjurersVest();
+    fillCouncillorsRobes();
+    fillCouncillorsTunic();
+    fillDarkmistArmor();
+    fillDarkmistWraps();
+    fillDisciplesRobe();
+    fillDisciplesVest();
+    fillDurableRobe();
+    fillDurableTunic();
+    fillDuskwovenRobe();
     System.out.println(list.get(list.size() - 1));
+    System.out.println(list.size() + "/" + ids.length);
   }
   
+  private static void fillDuskwovenRobe() {
+    int id = 10065;
+    MultiBonus duskwovenRobe = new MultiBonus("Duskwoven Robe", id);
+    duskwovenRobe.createArcaneResistanceTree(14, 15, 0.5);
+    duskwovenRobe.createArcaneWrathTree(34, 36, 10.0);
+    duskwovenRobe.createFireResistanceTree(24, 25, 0.7);
+    duskwovenRobe.createFrostResistanceTree(24, 25, 0.3);
+    duskwovenRobe.createFrozenWrathTree(34, 36, 8.4);
+    duskwovenRobe.createIntellectTree(24, 25, 6.5);
+    duskwovenRobe.createNatureResistanceTree(24, 25, 0.4);
+    duskwovenRobe.createShadowResistanceTree(24, 25, 0.4);
+    duskwovenRobe.createShadowWrathTree(34, 36, 6.2);
+    duskwovenRobe.createSpiritTree(24, 25, 8.8);
+    duskwovenRobe.createStaminaTree(24, 25, 6.0);
+    
+    duskwovenRobe.createEagleTree(15, 16, 11.2);
+    duskwovenRobe.createOwlTree(15, 16, 22.4);
+    duskwovenRobe.createWhaleTree(15, 16, 18.4);
+    list.add(duskwovenRobe);
+  }
+
+  private static void fillDurableTunic() {
+    int id = 9819;
+    MultiBonus durableTunic = new MultiBonus("Durable Tunic", id);
+    durableTunic.createArcaneWrathTree(19, 20, 3.8);
+    durableTunic.createFrozenWrathTree(19, 20, 3.3);
+    durableTunic.createIntellectTree(13, 14, 13.2);
+    durableTunic.createShadowWrathTree(19, 20, 2.0);
+    durableTunic.createSpiritTree(13, 14, 6.5);
+    durableTunic.createStaminaTree(13, 14, 4.6);
+    
+    durableTunic.createEagleTree(8, 9, 19.0);
+    durableTunic.createOwlTree(8, 9, 34.9);
+    durableTunic.createWhaleTree(8, 9, 12.7);
+    list.add(durableTunic);
+  }
+
+  private static void fillDurableRobe() {
+    int id = 9826;
+    MultiBonus durableRobe = new MultiBonus("Durable Robe", id);
+    durableRobe.createArcaneWrathTree(19, 20, 4.1);
+    durableRobe.createFrozenWrathTree(19, 20, 3.7);
+    durableRobe.createIntellectTree(13, 14, 12.5);
+    durableRobe.createShadowWrathTree(19, 20, 2.1);
+    durableRobe.createSpiritTree(13, 14, 6.5);
+    durableRobe.createStaminaTree(13, 14, 4.8);
+    
+    durableRobe.createEagleTree(8, 9, 17.8);
+    durableRobe.createOwlTree(8, 9, 35.0);
+    durableRobe.createWhaleTree(8, 9, 13.4);
+    list.add(durableRobe);
+  }
+
+  private static void fillDisciplesVest() {
+    int id = 6266;
+    MultiBonus disciplesVest = new MultiBonus("Disciple's Vest", id);
+    disciplesVest.createArcaneWrathTree(4, 6, 5.1);
+    disciplesVest.createFrozenWrathTree(4, 6, 4.9);
+    disciplesVest.createIntellectTree(3, 4, 9.9);
+    disciplesVest.createShadowWrathTree(4, 6, 3.6);
+    disciplesVest.createSpiritTree(3, 4, 7.0);
+    disciplesVest.createStaminaTree(3, 4, 5.6);
+    
+    disciplesVest.createEagleTree(1, 2, 18.9);
+    disciplesVest.createOwlTree(1, 2, 30.9);
+    disciplesVest.createWhaleTree(1, 2, 13.9);
+    list.add(disciplesVest);
+  }
+
+  private static void fillDisciplesRobe() {
+    int id = 6512;
+    MultiBonus disciplesRobe = new MultiBonus("Disciple's Robe", id);
+    disciplesRobe.createArcaneWrathTree(4, 6, 5.7);
+    disciplesRobe.createFrozenWrathTree(4, 6, 5.8);
+    disciplesRobe.createIntellectTree(3, 4, 8.8);
+    disciplesRobe.createShadowWrathTree(4, 6, 4.2);
+    disciplesRobe.createSpiritTree(3, 4, 8.1);
+    disciplesRobe.createStaminaTree(3, 4, 5.7);
+    
+    disciplesRobe.createEagleTree(1, 2, 18.3);
+    disciplesRobe.createOwlTree(1, 2, 28.3);
+    disciplesRobe.createWhaleTree(1, 2, 14.9);
+    list.add(disciplesRobe);
+  }
+
+  private static void fillDarkmistWraps() {
+    int id = 14244;
+    MultiBonus darkmistWraps = new MultiBonus("Darkmist Wraps", id);
+    darkmistWraps.createArcaneWrathTree(27, 29, 6.0);
+    darkmistWraps.createFrozenWrathTree(27, 29, 5.4);
+    darkmistWraps.createIntellectTree(19, 20, 7.8);
+    darkmistWraps.createShadowWrathTree(27, 29, 3.3);
+    darkmistWraps.createSpiritTree(19, 20, 9.2);
+    darkmistWraps.createStaminaTree(19, 20, 6.6);
+    
+    darkmistWraps.createEagleTree(12, 13, 18.4);
+    darkmistWraps.createOwlTree(12, 13, 25.0);
+    darkmistWraps.createWhaleTree(12, 13, 18.4);
+    list.add(darkmistWraps);
+  }
+
+  private static void fillDarkmistArmor() {
+    int id = 14237;
+    MultiBonus darkmistArmor = new MultiBonus("Darkmist Armor", id);
+    darkmistArmor.createArcaneWrathTree(27, 29, 5.4);
+    darkmistArmor.createFrozenWrathTree(27, 29, 5.2);
+    darkmistArmor.createIntellectTree(19, 20, 7.9);
+    darkmistArmor.createShadowWrathTree(27, 29, 3.4);
+    darkmistArmor.createSpiritTree(19, 20, 8.1);
+    darkmistArmor.createStaminaTree(19, 20, 6.3);
+    
+    darkmistArmor.createEagleTree(12, 13, 20.4);
+    darkmistArmor.createOwlTree(12, 13, 25.8);
+    darkmistArmor.createWhaleTree(12, 13, 17.5);
+    list.add(darkmistArmor);
+  }
+
+  private static void fillCouncillorsTunic() {
+    int id = 10104;
+    MultiBonus councillorsTunic = new MultiBonus("Councillor's Tunic", id);
+    councillorsTunic.createArcaneResistanceTree(25, 26, 0.2);
+    councillorsTunic.createArcaneWrathTree(36, 37, 8.2);
+    councillorsTunic.createFireResistanceTree(25, 26, 0.6);
+    councillorsTunic.createFrostResistanceTree(25, 26, 0.3);
+    councillorsTunic.createFrozenWrathTree(36, 37, 8.5);
+    councillorsTunic.createIntellectTree(25, 26, 7.4);
+    councillorsTunic.createNatureResistanceTree(25, 26, 0.3);
+    councillorsTunic.createShadowResistanceTree(25, 26, 0.2);
+    councillorsTunic.createShadowWrathTree(36, 37, 7.4);
+    councillorsTunic.createSpiritTree(25, 26, 6.6);
+    councillorsTunic.createStaminaTree(25, 26, 6.1);
+    
+    councillorsTunic.createEagleTree(16, 17, 14.7);
+    councillorsTunic.createOwlTree(16, 17, 24.2);
+    councillorsTunic.createWhaleTree(16, 17, 15.3);
+    list.add(councillorsTunic);
+  }
+
+  private static void fillCouncillorsRobes() {
+    int id = 10102;
+    MultiBonus councillorsRobe = new MultiBonus("Councillor's Robes", id);
+    councillorsRobe.createArcaneResistanceTree(26, 26, 0.2);
+    councillorsRobe.createArcaneWrathTree(36, 37, 8.7);
+    councillorsRobe.createFireResistanceTree(25, 26, 0.5);
+    councillorsRobe.createFrostResistanceTree(26, 26, 0.3);
+    councillorsRobe.createFrozenWrathTree(36, 37, 9.0);
+    councillorsRobe.createIntellectTree(25, 26, 6.9);
+    councillorsRobe.createNatureResistanceTree(25, 26, 0.4);
+    councillorsRobe.createShadowResistanceTree(25, 26, 0.5);
+    councillorsRobe.createShadowWrathTree(36, 37, 7.7);
+    councillorsRobe.createSpiritTree(25, 26, 8.3);
+    councillorsRobe.createStaminaTree(25, 26, 5.6);
+    
+    councillorsRobe.createEagleTree(16, 17, 12.4);
+    councillorsRobe.createOwlTree(16, 17, 23.7);
+    councillorsRobe.createWhaleTree(16, 17, 15.9);
+    list.add(councillorsRobe);
+  }
+
+  private static void fillConjurersVest() {
+    int id = 9844;
+    MultiBonus conjurersVest = new MultiBonus("Conjurer's Vest", id);
+    conjurersVest.createArcaneWrathTree(21, 23, 4.0);
+    conjurersVest.createFrozenWrathTree(21, 23, 3.6);
+    conjurersVest.createIntellectTree(15, 16, 11.5);
+    conjurersVest.createShadowWrathTree(21, 23, 2.5);
+    conjurersVest.createSpiritTree(15, 16, 7.0);
+    conjurersVest.createStaminaTree(15, 16, 5.3);
+    
+    conjurersVest.createEagleTree(9, 10, 23.9);
+    conjurersVest.createOwlTree(9, 10, 27.7);
+    conjurersVest.createWhaleTree(9, 10, 14.6);
+    list.add(conjurersVest);
+  }
+
+  private static void fillConjurersRobe() {
+    int id = 9852;
+    MultiBonus conjurersRobe = new MultiBonus("Conjurer's Robe", id);
+    conjurersRobe.createArcaneWrathTree(21, 23, 4.6);
+    conjurersRobe.createFrozenWrathTree(21, 23, 3.9);
+    conjurersRobe.createIntellectTree(15, 16, 11.1);
+    conjurersRobe.createShadowWrathTree(21, 23, 2.8);
+    conjurersRobe.createSpiritTree(15, 16, 7.7);
+    conjurersRobe.createStaminaTree(15, 16, 5.7);
+    
+    conjurersRobe.createEagleTree(9, 10, 20.9);
+    conjurersRobe.createOwlTree(9, 10, 27.6);
+    conjurersRobe.createWhaleTree(9, 10, 15.8);
+    list.add(conjurersRobe);
+  }
+
   private static void fillCelestialTunic() {
     int id = 14308;
     MultiBonus celestialTunic = new MultiBonus("Celestial Tunic", id);
+    celestialTunic.createArcaneWrathTree(39, 40, 8.1);
+    celestialTunic.createFrozenWrathTree(39, 40, 8.1);
+    celestialTunic.createIntellectTree(27, 28, 7.0);
+    celestialTunic.createShadowWrathTree(39, 40, 7.5);
+    celestialTunic.createSpiritTree(27, 28, 5.9);
+    celestialTunic.createStaminaTree(27, 28, 5.9);
+    
+    celestialTunic.createEagleTree(17, 18, 14.4);
+    celestialTunic.createOwlTree(17, 18, 24.9);
+    celestialTunic.createWhaleTree(17, 18, 18.1);
+    list.add(celestialTunic);
   }
 
   private static void fillCelestialSilkRobes() {

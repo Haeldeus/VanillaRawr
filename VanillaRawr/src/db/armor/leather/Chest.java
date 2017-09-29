@@ -1,7 +1,22 @@
 package db.armor.leather;
 
+/**
+ * The Class, that stores every single Leather-Chest in the game with Values to search their Stats 
+ * in the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Chest {
 
+  /**
+   * All Leather-Chests stored as a Matrix of Objects. The Chests will be saved in the following 
+   * way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] chests = {
     {16905, "INV_Chest_Cloth_07", "Bloodfang Chestpiece"},
     {22476, "INV_Chest_Plate02", "Bonescythe Breastplate"},

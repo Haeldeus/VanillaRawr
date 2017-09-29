@@ -237,6 +237,12 @@ public class Legs {
     return res;
   }
   
+  /**
+   * The Main-Method for this Class, that executes all Methods to get all IDs, Names and 
+   * Icons and prints them into the Console.
+   * @param args  Unused.
+   * @since 1.0
+   */
   public static void main(String[] args) {
     int[] t1 = getIDs();
     String[] t2 = getIcons();

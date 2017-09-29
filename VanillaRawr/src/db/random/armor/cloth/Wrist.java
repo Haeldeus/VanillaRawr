@@ -6,6 +6,8 @@ import util.MultiBonus;
 
 public class Wrist {
 
+  private String warningString; //Used to create a Warning in Eclipse to see, which Classes are still missing, delete this after Completion!
+
   private static ArrayList<MultiBonus> list;
   
   private static int[] ids = {
@@ -13,7 +15,7 @@ public class Wrist {
     /*ToDo*/13409, 9937, 14291, 14260, 14301, 14166, 14311, 9846, 10096, 14240, 9821, 
     10059, 7355, 10213, 14226, 14330, 14268, 14221, 7525, 9768, 10136, 9793, 14248, 10248, 
     10173, 14279, 14160, 14187, 7475, 14320, 14122, 9909, 6613, 6563, 9879, 14197, 7437, 
-    14206, 14177, 6543, 
+    14206, 14177, 6543
   };
   
   public static ArrayList<MultiBonus> getList() {
@@ -30,7 +32,8 @@ public class Wrist {
     list = new ArrayList<MultiBonus>();
     fillAbyssalClothWristbands();
     fillFlameweaveCuffs();
-    System.out.println(list.get(1));
+    System.out.println(list.get(list.size() - 1));
+    System.out.println(list.size() + "/" + ids.length);
   }
 
   private static void fillFlameweaveCuffs() {

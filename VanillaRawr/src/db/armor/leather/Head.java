@@ -1,7 +1,21 @@
 package db.armor.leather;
 
+/**
+ * The Class, that stores every single Leather-Head in the game with Values to search their Stats 
+ * in the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Head {
 
+  /**
+   * All Leather-Heads stored as a Matrix of Objects. The Chests will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] heads = {
     {16908, "INV_Helmet_41", "Bloodfang Hood"},
     {22478, "INV_Helmet_58", "Bonescythe Helmet"},
@@ -137,6 +151,11 @@ public class Head {
     {8750, "INV_Helmet_11", "Thick Leather Hat"}
   };
   
+  /**
+   * Returns all IDs, that are used by Leather-Heads.
+   * @return  An Array of Integers, that represents all IDs, that are used by Leather-Heads.
+   * @since 1.0
+   */
   public static int[] getIDs() {
     int[] res = new int[heads.length];
     for (int i = 0; i < heads.length; i++) {
@@ -145,6 +164,12 @@ public class Head {
     return res;
   }
   
+  /**
+   * Returns all Icons, that are used by Leather-Heads.
+   * @return  An Array of Strings, that represents all Icons, that are used by Leather-Heads by 
+   *     stating their Name.
+   * @since 1.0
+   */
   public static String[] getIcons() {
     String[] res = new String[heads.length];
     for (int i = 0; i < heads.length; i++) {
@@ -153,6 +178,11 @@ public class Head {
     return res;
   }
   
+  /**
+   * Returns all Names of Leather-Heads in the Game.
+   * @return  The Name of all Leather-Heads in the Game as an Array of Strings.
+   * @since 1.0
+   */
   public static String[] getNames() {
     String[] res = new String[heads.length];
     for (int i = 0; i < heads.length; i++) {
@@ -161,6 +191,12 @@ public class Head {
     return res;
   }
   
+  /**
+   * The Main-Method for this Class, that executes all Methods to get all IDs, Names and 
+   * Icons and prints them into the Console.
+   * @param args  Unused.
+   * @since 1.0
+   */
   public static void main(String[] args) {
     int[] t1 = getIDs();
     String[] t2 = getIcons();

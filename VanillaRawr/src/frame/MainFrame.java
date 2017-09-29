@@ -9,11 +9,10 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.HashMap;
 
 import javax.swing.BorderFactory;
@@ -76,7 +75,6 @@ public class MainFrame {
   public void show() {
     frame.setSize(1000, 740);
     frame.setMinimumSize(new Dimension(1000, 740));
-    
     Container content = frame.getContentPane();
     createContent(content);
     frame.setVisible(true);
@@ -1157,25 +1155,22 @@ public class MainFrame {
     newFrame.setSize(350,500);
     newFrame.setUndecorated(true);
     System.out.println("adding focus listener");
-    newFrame.addFocusListener(new FocusListener() {
-      private boolean gained = true;
+    newFrame.addWindowListener(new WindowListener() {
       @Override
-      public void focusGained(FocusEvent e) {
-        gained = true;
-        System.out.println("focus gained");
-      }
-
+      public void windowActivated(WindowEvent arg0) {}
       @Override
-      public void focusLost(FocusEvent e) {
-        System.out.println("focus lost");
-        if (gained) {
-          System.out.println("focus lost");
-          newFrame.setVisible(false);
-          newFrame.dispatchEvent(new WindowEvent(newFrame, WindowEvent.WINDOW_CLOSING));
-        }
-      }
-        } 
-    );
+      public void windowClosed(WindowEvent arg0) {}
+      @Override
+      public void windowClosing(WindowEvent arg0) {}
+      @Override
+      public void windowDeactivated(WindowEvent arg0) {newFrame.dispose();} //MAYBE: add listener to #frame, so when it regains focus it will close newFrame?
+      @Override
+      public void windowDeiconified(WindowEvent arg0) {}
+      @Override
+      public void windowIconified(WindowEvent arg0) {}
+      @Override
+      public void windowOpened(WindowEvent arg0) {}
+    });
     Container content = newFrame.getContentPane();
     content.setLayout(new GridLayout(1,1));
     Container pane = new Container();

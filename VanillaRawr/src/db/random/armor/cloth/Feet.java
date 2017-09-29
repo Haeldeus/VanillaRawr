@@ -1,6 +1,14 @@
 package db.random.armor.cloth;
 
+import java.util.ArrayList;
+
+import util.MultiBonus;
+
 public class Feet {
+  
+  private String warningString; //Used to create a Warning in Eclipse to see, which Classes are still missing, delete this after Completion!
+  
+  private static ArrayList<MultiBonus> list;
   
   private static int[] ids = {
     18295, 9936, 14114, 20652, 14290, 14259, 14299, 14174, 14310, 9845, 10095, 14238, 9820, 
@@ -9,4 +17,24 @@ public class Feet {
     14214, 14176, 6537
   };
 
+  public static ArrayList<MultiBonus> getList() {
+    if (list == null) {
+      fill();
+    }
+    return list;
+  }
+  
+  public static int[] getIDs() {
+    return ids;
+  }
+  
+  private static void fill() {
+    list = new ArrayList<MultiBonus>();
+  //  System.out.println(list.get(list.size() - 1));
+    System.out.println(list.size() + "/" + ids.length);
+  }
+  
+  public static void main(String[] args) {
+    fill();
+  }
 }

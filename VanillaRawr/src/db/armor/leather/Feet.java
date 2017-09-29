@@ -1,7 +1,21 @@
 package db.armor.leather;
 
+/**
+ * The Class, that stores every single Leather-Feetin the game with Values to search their Stats in 
+ * the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Feet {
 
+  /**
+   * All Leather-Feet stored as a Matrix of Objects. The Chests will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] feet = {
     {16906, "INV_Boots_08", "Bloodfang Boots"},
     {22480, "INV_Boots_Plate_06", "Bonescythe Sabatons"},

@@ -23,10 +23,10 @@ public class Test {
     db.random.weapons.ranged.Bows.getList();
     db.random.weapons.ranged.Guns.getList();
     db.random.weapons.ranged.Wands.getList();
-    //db.randomBoni.armor.cloth.Chests.getList();
-    
+    db.random.armor.cloth.Chest.getList();
+    db.random.armor.cloth.Feet.getList();
     System.out.println("Test ended! If there are no other Messages, the Database is complete and "
         + "correct.");
-    System.out.println(util.DatabaseConnecter.getAllIDs().length);
+  //  System.out.println(util.DatabaseConnecter.getAllIDs().length);
   }
 }

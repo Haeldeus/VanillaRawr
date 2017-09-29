@@ -1,7 +1,21 @@
 package db.armor.leather;
 
+/**
+ * The Class, that stores every single Leather-Hands in the game with Values to search their Stats 
+ * in the Database.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Hands {
 
+  /**
+   * All Leather-Hands stored as a Matrix of Objects. The Chests will be saved in the following way:
+   * <br/> [id][Icon][Name]
+   * <br/> [id][Icon][Name]
+   * <br/> :
+   * <br/> :
+   * <br/> :
+   */
   private static Object[][] hands = {
     {18823, "INV_Gauntlets_23", "Aged Core Leather Gloves"},
     {21682, "INV_Gauntlets_21", "Bile-Covered Gauntlets"},
