@@ -26,12 +26,15 @@ public class Downloader {
   private static void getPages(int[] ids) {
     URL url;
     InputStream is = null;
+    long start = System.currentTimeMillis();
     BufferedReader br;
     String line;
     int counter = 0;
     for (int id : ids) {
       if (counter % 100 == 0) {
-        System.out.println(counter);
+        System.out.println(counter + "/" + ids.length + " - " 
+            + (System.currentTimeMillis() - start) + "ms / " 
+            + (System.currentTimeMillis() - start) / 1000 + "s");
       }
       try {
         Thread.sleep(100);
@@ -73,7 +76,9 @@ public class Downloader {
    * @since 1.0
    */
   public static void main(String[] args) {
-    int[] ids = util.DatabaseConnecter.getAllIDs();
+    //10026
+    //int[] ids = util.DatabaseConnecter.getAllIDs();
+    int[] ids = {10026};
     getPages(ids);
   }
 }

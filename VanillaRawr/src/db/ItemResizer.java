@@ -15,16 +15,20 @@ import java.io.PrintWriter;
 public class ItemResizer {
   private String tokenizer = "<table><tr><td><table><tr><td>";
   
-  
+  /**
+   * Resizes the Files of the given ID's to a more readable and smaller File.
+   * @param ids The ID's of all Items, that will be resized.
+   * @since 1.0
+   */
   public void resize(int[] ids) {
     int counter = 0;
     for (int id : ids) {
       String path = "C:" + File.separator + "Users" + File.separator + "Frederic" + File.separator
           + "Desktop" + File.separator + "Items" + File.separator + id + ".html";
       
-      String writePath = "C:" + File.separator + "Users" + File.separator + "Frederic" + File.separator
-          + "Desktop" + File.separator + "Items" + File.separator +"Shortened" + File.separator 
-          + id + ".txt";
+      String writePath = "C:" + File.separator + "Users" + File.separator + "Frederic" 
+          + File.separator + "Desktop" + File.separator + "Items" + File.separator + "Shortened" 
+          + File.separator + id + ".txt";
 
       try {
         File f = new File(path);
@@ -65,7 +69,7 @@ public class ItemResizer {
       }
       counter++;
       if (counter % 100 == 0) {
-        System.out.println(counter + "/"+ ids.length);
+        System.out.println(counter + "/" + ids.length);
       }
     }
   }
