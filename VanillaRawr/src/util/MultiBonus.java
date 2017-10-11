@@ -641,4 +641,23 @@ public class MultiBonus {
         + "\" is: " + chance);
     return res;
   }
+  
+  public ArrayList<Item> getAllItems() {
+    for (Tree t : boni) {
+      Stat stat = t.getDefaultBonus();
+      int defaultAmount = t.getDefaultAmount();
+      SubTree left = t.getLeft();
+      SubTree right = t.getRight();
+      for (int i = left.getLower(); i <= left.getUpper(); i++) {
+        try {
+          for (int j = right.getLower(); j <= right.getUpper(); j++) {
+              System.out.println(this.getName() + " " + t.getName() + ": +" + i + " " + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
+          } 
+        } catch (Exception e) {
+          System.out.println(this.getName() + " " + t.getName() + ": +" + i + " " + left.getAttribute().toString());
+        }
+      }
+    }
+    return null;
+  }
 }

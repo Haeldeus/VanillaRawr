@@ -215,5 +215,9 @@ public class Test {
         + "correct.");
     System.out.println(impl + "/" + all + " - " + ((double)(impl) / (double)(all) * 100 + "% done"));
   //  System.out.println(util.DatabaseConnecter.getAllIDs().length);
+//    tmp = db.random.weapons.melee.Daggers.getList();
+//    for (MultiBonus mb : tmp) {
+//      mb.getAllItems();
+//    }
   }
 }
