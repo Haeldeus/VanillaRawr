@@ -13,10 +13,10 @@ public class Chest {
   private static int[] ids = {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
     14172, 14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826,
-    9819, 10065, 
+    9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
+    14216, 14225, 7518, 7517, 9773, 
     /*ToDo*/
-    10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
-    14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
+    9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
     10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
     7468, 14326, 14318, 14127, 14133, 9905, 9913, 6609, 6610, 6567, 6569, 9749, 9748, 9874, 
     9884, 14202, 14204, 7429, 7430, 14213, 14215, 14180, 14184, 6538, 6536
@@ -68,10 +68,291 @@ public class Chest {
     fillDurableRobe();
     fillDurableTunic();
     fillDuskwovenRobe();
+    fillDuskwovenTunic();
+    fillEldersPaddedArmor();
+    fillEldersRobe();
+    fillElegantRobes();
+    fillElegantTunic();
+    fillEmbersilkRobes();
+    fillEmbersilkTunic();
+    fillEternalChestguard();
+    fillEternalWraps();
+    fillGaeasRaiment();
+    fillGaeasTunic();
+    fillGeomancersJerkin();
+    fillGeomancersWraps();
+    fillGossamerRobe();
+    fillGossamerTunic();
+    fillGreenweaveRobe();
+    
     System.out.println(list.get(list.size() - 1));
     System.out.println(list.size() + "/" + ids.length);
   }
   
+  private static void fillGreenweaveRobe() {
+    int id = 9773;
+    MultiBonus greenweaveRobe = new MultiBonus("Greenweave Robe", id);
+    greenweaveRobe.createArcaneWrathTree(13, 14, 4.8);
+    greenweaveRobe.createFrozenWrathTree(13, 14, 4.3);
+    greenweaveRobe.createIntellectTree(9, 10, 11.7);
+    greenweaveRobe.createShadowWrathTree(13, 14, 2.6);
+    greenweaveRobe.createSpiritTree(9, 10, 8.0);
+    greenweaveRobe.createStaminaTree(9, 10, 4.7);
+    
+    greenweaveRobe.createEagleTree(5, 6, 14.1);
+    greenweaveRobe.createOwlTree(5, 6, 36.0);
+    greenweaveRobe.createWhaleTree(5, 6, 13.9);
+    list.add(greenweaveRobe);
+  }
+
+  private static void fillGossamerTunic() {
+    int id = 7517;
+    MultiBonus gossamerTunic = new MultiBonus("Gossamer Tunic", id);
+    gossamerTunic.createArcaneWrathTree(30, 31, 5.8);
+    gossamerTunic.createFrozenWrathTree(30, 31, 4.8);
+    gossamerTunic.createIntellectTree(21, 22, 7.5);
+    gossamerTunic.createShadowWrathTree(30, 31, 3.5);
+    gossamerTunic.createSpiritTree(21, 22, 8.5);
+    gossamerTunic.createStaminaTree(21, 22, 6.1);
+    gossamerTunic.createEagleTree(13, 14, 20.1);
+    gossamerTunic.createOwlTree(13, 14, 25.8);
+    gossamerTunic.createWhaleTree(13, 14, 18.0);
+    list.add(gossamerTunic);
+  }
+
+  private static void fillGossamerRobe() {
+    int id = 7518;
+    MultiBonus gossamerRobe = new MultiBonus("Gossamer Robe", id);
+    gossamerRobe.createArcaneWrathTree(30, 31, 7.2);
+    gossamerRobe.createFrozenWrathTree(30, 31, 5.4);
+    gossamerRobe.createIntellectTree(21, 22, 7.5);
+    gossamerRobe.createShadowWrathTree(30, 31, 3.5);
+    gossamerRobe.createSpiritTree(21, 22, 9.6);
+    gossamerRobe.createStaminaTree(21, 22, 6.5);
+    
+    gossamerRobe.createEagleTree(13, 14, 15.8);
+    gossamerRobe.createOwlTree(13, 14, 25.1);
+    gossamerRobe.createWhaleTree(13, 14, 19.3);
+    list.add(gossamerRobe);
+  }
+
+  private static void fillGeomancersWraps() {
+    int id = 14225;
+    MultiBonus geomancersWraps = new MultiBonus("Geomancer's Wraps", id);
+    geomancersWraps.createArcaneWrathTree(23, 24, 5.1);
+    geomancersWraps.createFrozenWrathTree(23, 24, 4.1);
+    geomancersWraps.createIntellectTree(16, 17, 11.0);
+    geomancersWraps.createShadowWrathTree(23, 24, 3.1);
+    geomancersWraps.createSpiritTree(16, 17, 6.8);
+    geomancersWraps.createStaminaTree(16, 17, 5.4);
+    
+    geomancersWraps.createEagleTree(10, 11, 24.9);
+    geomancersWraps.createOwlTree(10, 11, 24.9);
+    geomancersWraps.createWhaleTree(10, 11, 14.9);
+    list.add(geomancersWraps);
+  }
+
+  private static void fillGeomancersJerkin() {
+    int id = 14216;
+    MultiBonus geomancersJerkin = new MultiBonus("Geomancer's Jerkin", id);
+    geomancersJerkin.createArcaneWrathTree(23, 24, 3.9);
+    geomancersJerkin.createFrozenWrathTree(23, 24, 3.5);
+    geomancersJerkin.createIntellectTree(16, 17, 10.5);
+    geomancersJerkin.createShadowWrathTree(23, 24, 2.7);
+    geomancersJerkin.createSpiritTree(16, 17, 6.7);
+    geomancersJerkin.createStaminaTree(16, 17, 5.1);
+    
+    geomancersJerkin.createEagleTree(10, 11, 27.0);
+    geomancersJerkin.createOwlTree(10, 11, 26.3);
+    geomancersJerkin.createWhaleTree(10, 11, 14.1);
+    list.add(geomancersJerkin);
+  }
+
+  private static void fillGaeasTunic() {
+    int id = 14277;
+    MultiBonus gaeasTunic = new MultiBonus("Gaea's Tunic", id);
+    gaeasTunic.createArcaneResistanceTree(22, 23, 0.3);
+    gaeasTunic.createArcaneWrathTree(31, 33, 9.8);
+    gaeasTunic.createFireResistanceTree(22, 23, 0.4);
+    gaeasTunic.createFrostResistanceTree(23, 23, 0.1);
+    gaeasTunic.createFrozenWrathTree(31, 33, 7.1);
+    gaeasTunic.createIntellectTree(22, 23, 6.5);
+    gaeasTunic.createNatureResistanceTree(22, 23, 0.4);
+    gaeasTunic.createShadowResistanceTree(22, 23, 0.3);
+    gaeasTunic.createShadowWrathTree(31, 33, 4.6);
+    gaeasTunic.createSpiritTree(22, 23, 8.6);
+    gaeasTunic.createStaminaTree(22, 23, 6.3);
+    
+    gaeasTunic.createEagleTree(14, 15, 15.4);
+    gaeasTunic.createOwlTree(14, 15, 23.9);
+    gaeasTunic.createWhaleTree(14, 15, 16.2);
+    list.add(gaeasTunic);
+  }
+
+  private static void fillGaeasRaiment() {
+    int id = 14275;
+    MultiBonus gaeasRaiment = new MultiBonus("Gaea's Raiment", id);
+    gaeasRaiment.createArcaneResistanceTree(22, 23, 0.3);
+    gaeasRaiment.createArcaneWrathTree(31, 33, 11.0);
+    gaeasRaiment.createFireResistanceTree(22, 23, 0.5);
+    gaeasRaiment.createFrostResistanceTree(22, 23, 0.5);
+    gaeasRaiment.createFrozenWrathTree(31, 33, 8.2);
+    gaeasRaiment.createIntellectTree(22, 23, 7.0);
+    gaeasRaiment.createNatureResistanceTree(22, 23, 0.3);
+    gaeasRaiment.createShadowResistanceTree(22, 23, 0.4);
+    gaeasRaiment.createShadowWrathTree(31, 33, 5.3);
+    gaeasRaiment.createSpiritTree(22, 23, 9.0);
+    gaeasRaiment.createStaminaTree(22, 23, 5.3);
+    
+    gaeasRaiment.createEagleTree(14, 15, 10.7);
+    gaeasRaiment.createOwlTree(14, 15, 23.5);
+    gaeasRaiment.createWhaleTree(14, 15, 18.1);
+    list.add(gaeasRaiment);
+  }
+
+  private static void fillEternalWraps() {
+    int id = 14336;
+    MultiBonus eternalWraps = new MultiBonus("Eternal Wraps", id);
+    eternalWraps.createEagleTree(19, 19, 35.6);
+    eternalWraps.createOwlTree(19, 19, 45.5);
+    eternalWraps.createWhaleTree(19, 19, 18.8);
+    list.add(eternalWraps);
+  }
+
+  private static void fillEternalChestguard() {
+    int id = 14328;
+    MultiBonus eternalChestguard = new MultiBonus("Eternal Chestguard", id);
+    eternalChestguard.createFrozenWrathTree(40, 40, 15.9);
+    eternalChestguard.createIntellectTree(29, 29, 15.2);
+    
+    eternalChestguard.createEagleTree(19, 19, 20.3);
+    eternalChestguard.createOwlTree(19, 19, 26.1);
+    eternalChestguard.createWhaleTree(19, 19, 22.5);
+    list.add(eternalChestguard);
+  }
+
+  private static void fillEmbersilkTunic() {
+    int id = 14230;
+    MultiBonus embersilkTunic = new MultiBonus("Embersilk Tunic", id);
+    embersilkTunic.createArcaneWrathTree(23, 24, 3.7);
+    embersilkTunic.createFrozenWrathTree(23, 24, 4.2);
+    embersilkTunic.createIntellectTree(16, 17, 9.7);
+    embersilkTunic.createShadowWrathTree(23, 24, 2.7);
+    embersilkTunic.createSpiritTree(16, 17, 6.5);
+    embersilkTunic.createStaminaTree(16, 17, 4.7);
+    
+    embersilkTunic.createEagleTree(10, 11, 28.6);
+    embersilkTunic.createOwlTree(10, 11, 26.0);
+    embersilkTunic.createWhaleTree(10, 11, 13.9);
+    list.add(embersilkTunic);
+  }
+
+  private static void fillEmbersilkRobes() {
+    int id = 14234;
+    MultiBonus embersilkRobes = new MultiBonus("Embersilk Robes", id);
+    embersilkRobes.createArcaneWrathTree(23, 24, 4.6);
+    embersilkRobes.createFrozenWrathTree(23, 24, 4.4);
+    embersilkRobes.createIntellectTree(16, 17, 10.1);
+    embersilkRobes.createShadowWrathTree(23, 24, 3.1);
+    embersilkRobes.createSpiritTree(16, 17, 7.4);
+    embersilkRobes.createStaminaTree(16, 17, 5.5);
+    
+    embersilkRobes.createEagleTree(10, 11, 22.9);
+    embersilkRobes.createOwlTree(10, 11, 26.7);
+    embersilkRobes.createWhaleTree(10, 11, 15.3);
+    list.add(embersilkRobes);
+  }
+
+  private static void fillElegantTunic() {
+    int id = 10218;
+    MultiBonus elegantTunic = new MultiBonus("Elegant Tunic", id);
+    elegantTunic.createArcaneWrathTree(39, 40, 7.5);
+    elegantTunic.createFireResistanceTree(27, 27, 0.4);
+    elegantTunic.createFrostResistanceTree(27, 27, 0.6);
+    elegantTunic.createFrozenWrathTree(39, 40, 9.1);
+    elegantTunic.createIntellectTree(27, 28, 7.2);
+    elegantTunic.createNatureResistanceTree(28, 28, 0.4);
+    elegantTunic.createShadowWrathTree(39, 40, 9.1);
+    elegantTunic.createSpiritTree(27, 28, 6.0);
+    elegantTunic.createStaminaTree(27, 28, 5.6);
+    
+    elegantTunic.createEagleTree(17, 18, 15.6);
+    elegantTunic.createOwlTree(17, 18, 24.7);
+    elegantTunic.createWhaleTree(17, 18, 14.1);
+    list.add(elegantTunic);
+  }
+
+  private static void fillElegantRobes() {
+    int id = 10215;
+    MultiBonus elegantRobes = new MultiBonus("Elegant Robes", id);
+    elegantRobes.createArcaneWrathTree(39, 40, 7.8);
+    elegantRobes.createFireResistanceTree(27, 27, 0.4);
+    elegantRobes.createFrozenWrathTree(39, 40, 8.6);
+    elegantRobes.createIntellectTree(27, 28, 7.8);
+    elegantRobes.createNatureResistanceTree(27, 27, 0.2);
+    elegantRobes.createShadowWrathTree(39, 40, 7.8);
+    elegantRobes.createSpiritTree(27, 28, 6.7);
+    elegantRobes.createStaminaTree(27, 28, 6.3);
+    
+    elegantRobes.createEagleTree(17, 18, 15.1);
+    elegantRobes.createOwlTree(17, 18, 24.4);
+    elegantRobes.createWhaleTree(17, 18, 15.0);
+    list.add(elegantRobes);
+  }
+
+  private static void fillEldersRobe() {
+    int id = 7369;
+    MultiBonus eldersRobe = new MultiBonus("Elder's Robe", id);
+    eldersRobe.createArcaneWrathTree(19, 20, 4.8);
+    eldersRobe.createFrozenWrathTree(19, 20, 4.1);
+    eldersRobe.createIntellectTree(13, 14, 11.5);
+    eldersRobe.createShadowWrathTree(19, 20, 2.5);
+    eldersRobe.createSpiritTree(13, 14, 7.4);
+    eldersRobe.createStaminaTree(13, 14, 4.9);
+    
+    eldersRobe.createEagleTree(8, 9, 18.4);
+    eldersRobe.createOwlTree(8, 9, 32.4);
+    eldersRobe.createWhaleTree(8, 9, 14.0);
+    list.add(eldersRobe);
+  }
+
+  private static void fillEldersPaddedArmor() {
+    int id = 7353;
+    MultiBonus eldersPaddedArmor = new MultiBonus("Elder's Padded Armor", id);
+    eldersPaddedArmor.createArcaneWrathTree(19, 20, 4.0);
+    eldersPaddedArmor.createFrozenWrathTree(19, 20, 3.5);
+    eldersPaddedArmor.createIntellectTree(13, 14, 12.7);
+    eldersPaddedArmor.createShadowWrathTree(19, 20, 2.2);
+    eldersPaddedArmor.createSpiritTree(13, 14, 6.6);
+    eldersPaddedArmor.createStaminaTree(13, 14, 4.5);
+    
+    eldersPaddedArmor.createEagleTree(8, 9, 20.1);
+    eldersPaddedArmor.createOwlTree(8, 9, 33.4);
+    eldersPaddedArmor.createWhaleTree(8, 9, 13.2);
+    list.add(eldersPaddedArmor);
+  }
+
+  private static void fillDuskwovenTunic() {
+    int id = 10057;
+    MultiBonus duskwovenTunic = new MultiBonus("Duskwoven Tunic", id);
+    duskwovenTunic.createArcaneResistanceTree(24, 25, 0.3);
+    duskwovenTunic.createArcaneWrathTree(34, 36, 8.9);
+    duskwovenTunic.createFireResistanceTree(24, 25, 0.4);
+    duskwovenTunic.createFrostResistanceTree(24, 25, 0.3);
+    duskwovenTunic.createFrozenWrathTree(34, 36, 8.0);
+    duskwovenTunic.createIntellectTree(24, 25, 6.3);
+    duskwovenTunic.createNatureResistanceTree(24, 25, 0.3);
+    duskwovenTunic.createShadowResistanceTree(24, 25, 0.4);
+    duskwovenTunic.createShadowWrathTree(34, 36, 5.9);
+    duskwovenTunic.createSpiritTree(24, 25, 8.7);
+    duskwovenTunic.createStaminaTree(24, 25, 6.0);
+    
+    duskwovenTunic.createEagleTree(15, 16, 12.9);
+    duskwovenTunic.createOwlTree(15, 16, 24.2);
+    duskwovenTunic.createWhaleTree(15, 16, 17.3);
+    list.add(duskwovenTunic);
+  }
+
   private static void fillDuskwovenRobe() {
     int id = 10065;
     MultiBonus duskwovenRobe = new MultiBonus("Duskwoven Robe", id);
