@@ -2,6 +2,7 @@ package util;
 
 import db.stats.Stat;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * This Class provides Methods to support Items, that have variable Boni.
@@ -652,25 +653,33 @@ public class MultiBonus {
    * @since 1.0
    * @see Item
    */
-  public ArrayList<Item> getAllItems() {
-    ArrayList<Item> res = new ArrayList<Item>();
+  public ArrayList<HashMap<Stat, Integer>> getAllItems() {
+    ArrayList<HashMap<Stat, Integer>> res = new ArrayList<HashMap<Stat, Integer>>();
     for (Tree t : boni) {
       Stat stat = t.getDefaultBonus();
       int defaultAmount = t.getDefaultAmount();
       SubTree left = t.getLeft();
       SubTree right = t.getRight();
       for (int i = left.getLower(); i <= left.getUpper(); i++) {
+        HashMap<Stat, Integer> tmp = new HashMap<Stat, Integer>();
         try {
           for (int j = right.getLower(); j <= right.getUpper(); j++) {
+            tmp = new HashMap<Stat, Integer>();
             if (stat == null) {
               System.out.println(this.getName() + t.getName() + ": +" 
                   + i + " " + left.getAttribute().toString() + ", +" + j + " " 
                   + right.getAttribute());
+              tmp.put(left.getAttribute(), i);
+              tmp.put(right.getAttribute(), j);
             } else {
               System.out.println(this.getName() + t.getName() + ": +" 
                   + defaultAmount + " " + stat + ", " + i + " " 
                   + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
+              tmp.put(stat, defaultAmount);
+              tmp.put(left.getAttribute(), i);
+              tmp.put(right.getAttribute(), j);
             }
+            res.add(tmp);
           } 
           /*
            * This Catch is necessary, in case the Item has a single Stat in one of it's Trees.
@@ -679,14 +688,19 @@ public class MultiBonus {
           if (stat == null) {
             System.out.println(this.getName() + t.getName() + ": +" + i + " " 
                 + left.getAttribute().toString());
+            tmp.put(left.getAttribute(), i);
           } else {
             System.out.println(this.getName() + t.getName() + ": +" 
                 + defaultAmount + " " + stat + ", " + i + " " + left.getAttribute().toString());
+            tmp.put(stat, defaultAmount);
+            tmp.put(left.getAttribute(), i);
           }
+          res.add(tmp);
         }
       }
     }
-    return null;
+    System.out.println(res.toString());
+    return res;
     //TODO Finish this Method!
   }
 }
