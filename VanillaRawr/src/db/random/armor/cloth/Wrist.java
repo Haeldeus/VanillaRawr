@@ -33,7 +33,7 @@ public class Wrist {
     fillAbyssalClothWristbands();
     fillFlameweaveCuffs();
     System.out.println(list.get(list.size() - 1));
-    System.out.println(list.size() + "/" + ids.length);
+    System.out.println("Cloth Wrist: " + list.size() + "/" + ids.length);
   }
 
   private static void fillFlameweaveCuffs() {

@@ -31,7 +31,7 @@ public class Legs {
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     //  System.out.println(list.get(list.size() - 1));
-    System.out.println(list.size() + "/" + ids.length);
+    System.out.println("Cloth Legs: " + list.size() + "/" + ids.length);
   }
     
   public static void main(String[] args) {

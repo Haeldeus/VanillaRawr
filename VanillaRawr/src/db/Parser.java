@@ -9,6 +9,11 @@ import java.util.ArrayList;
 
 import util.DatabaseConnecter;
 
+/**
+ * A Class to parse the DB into a XML-File.
+ * @author Haeldeus
+ * @version 0.0
+ */
 public class Parser {
   
   String path;
