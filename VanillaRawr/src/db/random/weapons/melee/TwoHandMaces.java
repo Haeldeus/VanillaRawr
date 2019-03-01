@@ -45,37 +45,7 @@ public class TwoHandMaces {
     fillRoyalMallet();
     fillSequoiaBranch();
     fillSpikedClub();
-    fillStoneHammer(); /*
-    System.out.println(list.get(0));
-    System.out.println("---------------");
-    System.out.println(list.get(1));
-    System.out.println("---------------");
-    System.out.println(list.get(2));
-    System.out.println("---------------");
-    System.out.println(list.get(3));
-    System.out.println("---------------");
-    System.out.println(list.get(4));
-    System.out.println("---------------");
-    System.out.println(list.get(5));
-    System.out.println("---------------");
-    System.out.println(list.get(6));
-    System.out.println("---------------");
-    System.out.println(list.get(7));
-    System.out.println("---------------");
-    System.out.println(list.get(8));
-    System.out.println("---------------");
-    System.out.println(list.get(9));
-    System.out.println("---------------");
-    System.out.println(list.get(10));
-    System.out.println("---------------");
-    System.out.println(list.get(11));
-    System.out.println("---------------");
-    System.out.println(list.get(12));
-    System.out.println("---------------");
-    System.out.println(list.get(13));
-    System.out.println("---------------");
-    System.out.println(list.get(14));
-    System.out.println("---------------"); */
+    fillStoneHammer();
   }
   
   private static void fillStoneHammer() {

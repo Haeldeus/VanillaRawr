@@ -4,10 +4,23 @@ import java.util.ArrayList;
 
 import util.MultiBonus;
 
+/**
+ * A Class, that stores all Onehanded Axes with MultiBonus. They can be accessed by calling {@link 
+ * #getList()}.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class OneHandAxes {
 
+  /**
+   * A List, that saves every Onehanded Axe, that has a MultiBonus. These Items are saved 
+   * as an {@link ArrayList} of {@link MultiBonus}.
+   */
   private static ArrayList<MultiBonus> list;
   
+  /**
+   * The ID's of all Onehanded Axes with MultiBonus.
+   */
   private static int[] ids = {
     12527, 19921, 15237, 15235, 15240, 2073, 1994, 15239, 790, 863, 15234, 4568, 15232, 
     2080, 15236, 15230, 15233, 4561, 15231, 15238 
@@ -25,10 +38,19 @@ public class OneHandAxes {
     return list;
   }
   
+  /**
+   * Returns all ID's.
+   * @return The ID's of all Onehanded Axes as an Array of Integers.
+   * @since 1.0
+   */
   public static int[] getIds() {
     return ids;
   }
   
+  /**
+   * Fills the {@link #list} with all Onehanded Axes, that have a MultiBonus.
+   * @since 1.0
+   */
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     fillRibsplitter();
@@ -51,47 +73,12 @@ public class OneHandAxes {
     fillScalpingTomahawk();
     fillSplittingHatchet();
     fillWarlordsAxe();
-    /*System.out.println(list.get(0));
-    System.out.println("--------------------");
-    System.out.println(list.get(1));
-    System.out.println("--------------------");
-    System.out.println(list.get(2));
-    System.out.println("--------------------");
-    System.out.println(list.get(3));
-    System.out.println("--------------------");
-    System.out.println(list.get(4));
-    System.out.println("--------------------");
-    System.out.println(list.get(5));
-    System.out.println("--------------------");
-    System.out.println(list.get(6));
-    System.out.println("--------------------");
-    System.out.println(list.get(7));
-    System.out.println("--------------------");
-    System.out.println(list.get(8));
-    System.out.println("--------------------");
-    System.out.println(list.get(9));
-    System.out.println("--------------------");
-    System.out.println(list.get(10));
-    System.out.println("--------------------");
-    System.out.println(list.get(11));
-    System.out.println("--------------------");    
-    System.out.println(list.get(12));
-    System.out.println("--------------------");
-    System.out.println(list.get(13));
-    System.out.println("--------------------");
-    System.out.println(list.get(14));
-    System.out.println("--------------------");
-    System.out.println(list.get(15));
-    System.out.println("--------------------");
-    System.out.println(list.get(16));
-    System.out.println("--------------------");
-    System.out.println(list.get(17));
-    System.out.println("--------------------");
-    System.out.println(list.get(18));
-    System.out.println("--------------------");
-    System.out.println(list.get(19)); */
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15238">Warlord's Axe</a> to the List.
+   * @since 1.0
+   */
   private static void fillWarlordsAxe() {
     int id = 15238;
     MultiBonus warlordsAxe = new MultiBonus("Warlord's Axe", id);
@@ -110,6 +97,10 @@ public class OneHandAxes {
     list.add(warlordsAxe);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15231">Splitting Hatchet</a> to the List.
+   * @since 1.0
+   */
   private static void fillSplittingHatchet() {
     int id = 15231;
     MultiBonus splittingHatchet = new MultiBonus("Splitting Hatchet", id);
@@ -128,6 +119,10 @@ public class OneHandAxes {
     list.add(splittingHatchet);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=4561">Scalping Tomahawk</a> to the List.
+   * @since 1.0
+   */
   private static void fillScalpingTomahawk() {
     int id = 4561;
     MultiBonus scalpingTomahawk = new MultiBonus("Scalping Tomahawk", id);
@@ -138,6 +133,10 @@ public class OneHandAxes {
     list.add(scalpingTomahawk);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15233">Savage Axe</a> to the List.
+   * @since 1.0
+   */
   private static void fillSavageAxe() {
     int id = 15233;
     MultiBonus savageAxe = new MultiBonus("Savage Axe", id);
@@ -156,6 +155,10 @@ public class OneHandAxes {
     list.add(savageAxe);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15230">Ridge Cleaver</a> to the List.
+   * @since 1.0
+   */
   private static void fillRidgeCleaver() {
     int id = 15230;
     MultiBonus ridgeCleaver = new MultiBonus("Ridge Cleaver", id);
@@ -174,6 +177,10 @@ public class OneHandAxes {
     list.add(ridgeCleaver);    
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15236">Moon Cleaver</a> to the List.
+   * @since 1.0
+   */
   private static void fillMoonCleaver() {
     int id = 15236;
     MultiBonus moonCleaver = new MultiBonus("Moon Cleaver", id);
@@ -192,6 +199,10 @@ public class OneHandAxes {
     list.add(moonCleaver);    
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=2080">Hillborne Axe</a> to the List.
+   * @since 1.0
+   */
   private static void fillHillborneAxe() {
     int id = 2080;
     MultiBonus hillborneAxe = new MultiBonus("Hillborne Axe", id);
@@ -210,6 +221,10 @@ public class OneHandAxes {
     list.add(hillborneAxe);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15232">Hacking Cleaver</a> to the List.
+   * @since 1.0
+   */
   private static void fillHackingCleaver() {
     int id = 15232;
     MultiBonus hackingCleaver = new MultiBonus("Hacking Cleaver", id);
@@ -228,6 +243,10 @@ public class OneHandAxes {
     list.add(hackingCleaver);    
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=4568">Grunt Axe</a> to the List.
+   * @since 1.0
+   */
   private static void fillGruntAxe() {
     int id = 4568;
     MultiBonus gruntAxe = new MultiBonus("Grunt Axe", id);
@@ -238,6 +257,10 @@ public class OneHandAxes {
     list.add(gruntAxe);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15234">Greater Scythe</a> to the List.
+   * @since 1.0
+   */
   private static void fillGreaterScythe() {
     int id = 15234;
     MultiBonus greaterScythe = new MultiBonus("Greater Scythe", id);
@@ -256,6 +279,10 @@ public class OneHandAxes {
     list.add(greaterScythe);      
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=863">Gloom Reaper</a> to the List.
+   * @since 1.0
+   */
   private static void fillGloomReaper() {
     int id = 863;
     MultiBonus gloomReaper = new MultiBonus("Gloom Reaper", id);
@@ -274,6 +301,10 @@ public class OneHandAxes {
     list.add(gloomReaper);  
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=790">Forester's Axe</a> to the List.
+   * @since 1.0
+   */
   private static void fillForestersAxe() {
     int id = 790;
     MultiBonus forestersAxe = new MultiBonus("Forester's Axe", id);
@@ -292,6 +323,10 @@ public class OneHandAxes {
     list.add(forestersAxe);      
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15239">Felstone Reaver</a> to the List.
+   * @since 1.0
+   */
   private static void fillFelstoneReaver() {
     int id = 15239;
     MultiBonus felstoneReaver = new MultiBonus("Felstone Reaver", id);
@@ -310,6 +345,10 @@ public class OneHandAxes {
     list.add(felstoneReaver);    
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=1994">Ebonclaw Reaver</a> to the List.
+   * @since 1.0
+   */
   private static void fillEbonclawReaver() {
     int id = 1994;
     MultiBonus ebonclawReaver = new MultiBonus("Ebonclaw Reaver", id);
@@ -328,6 +367,10 @@ public class OneHandAxes {
     list.add(ebonclawReaver);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=2073">Dwarven Hatchet</a> to the List.
+   * @since 1.0
+   */
   private static void fillDwarvenHatchet() {
     int id = 2073;
     MultiBonus dwarvenHatchet = new MultiBonus("Dwarven Hatchet", id);
@@ -338,6 +381,10 @@ public class OneHandAxes {
     list.add(dwarvenHatchet);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15240">Demon's Claw</a> to the List.
+   * @since 1.0
+   */
   private static void fillDemonsClaw() {
     int id = 15240;
     MultiBonus demonsClaw = new MultiBonus("Demon's Claw", id);
@@ -356,6 +403,10 @@ public class OneHandAxes {
     list.add(demonsClaw);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15235">Crescent Edge</a> to the List.
+   * @since 1.0
+   */
   private static void fillCrescentEdge() {
     int id = 15235;
     MultiBonus crescentEdge = new MultiBonus("Crescent Edge", id);
@@ -374,6 +425,10 @@ public class OneHandAxes {
     list.add(crescentEdge);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=15237">Corpse Harvester</a> to the List.
+   * @since 1.0
+   */
   private static void fillCorpseHarvester() {
     int id = 15237;
     MultiBonus corpseHarvester = new MultiBonus("Corpse Harvester", id);
@@ -392,6 +447,10 @@ public class OneHandAxes {
     list.add(corpseHarvester);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=19921">Zulian Hacker</a> to the List.
+   * @since 1.0
+   */
   private static void fillZulianHacker() {  //Adds +2 Axes per default!
     int id = 19921;
     MultiBonus zulianHacker = new MultiBonus("Zulian Hacker", id);
@@ -410,6 +469,10 @@ public class OneHandAxes {
     list.add(zulianHacker);
   }
   
+  /**
+   * Adds the <a href="db.vanillagaming.org/?item=12527">Ribsplitter</a> to the List.
+   * @since 1.0
+   */
   private static void fillRibsplitter() {    //Adds 10 AP per default!
     int id = 12527;
     MultiBonus ribsplitter = new MultiBonus("Ribsplitter", id);

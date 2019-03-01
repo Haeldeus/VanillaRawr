@@ -642,7 +642,18 @@ public class MultiBonus {
     return res;
   }
   
+  /**
+   * A Method, that returns every single Item, that is possible with its' given MultiBonus-Trees.
+   * <br>E.g., if an Item has +(5-7) Intelligence, this Method returns an Instance of {@link Item} 
+   * with +5 Intelligence, another one with +6 Intelligence and a last one with +7 Intelligence. 
+   * <br>If there are even more Possibilities, with other Stats or even combined Stats, this Method 
+   * returns these Items as well.
+   * @return {@code null} at this Time, as this Method has to be finished.
+   * @since 1.0
+   * @see Item
+   */
   public ArrayList<Item> getAllItems() {
+    ArrayList<Item> res = new ArrayList<Item>();
     for (Tree t : boni) {
       Stat stat = t.getDefaultBonus();
       int defaultAmount = t.getDefaultAmount();
@@ -651,13 +662,31 @@ public class MultiBonus {
       for (int i = left.getLower(); i <= left.getUpper(); i++) {
         try {
           for (int j = right.getLower(); j <= right.getUpper(); j++) {
-              System.out.println(this.getName() + " " + t.getName() + ": +" + i + " " + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
+            if (stat == null) {
+              System.out.println(this.getName() + t.getName() + ": +" 
+                  + i + " " + left.getAttribute().toString() + ", +" + j + " " 
+                  + right.getAttribute());
+            } else {
+              System.out.println(this.getName() + t.getName() + ": +" 
+                  + defaultAmount + " " + stat + ", " + i + " " 
+                  + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
+            }
           } 
+          /*
+           * This Catch is necessary, in case the Item has a single Stat in one of it's Trees.
+           */
         } catch (Exception e) {
-          System.out.println(this.getName() + " " + t.getName() + ": +" + i + " " + left.getAttribute().toString());
+          if (stat == null) {
+            System.out.println(this.getName() + t.getName() + ": +" + i + " " 
+                + left.getAttribute().toString());
+          } else {
+            System.out.println(this.getName() + t.getName() + ": +" 
+                + defaultAmount + " " + stat + ", " + i + " " + left.getAttribute().toString());
+          }
         }
       }
     }
     return null;
+    //TODO Finish this Method!
   }
 }

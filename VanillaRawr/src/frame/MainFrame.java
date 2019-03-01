@@ -1158,16 +1158,25 @@ public class MainFrame {
     newFrame.addWindowListener(new WindowListener() {
       @Override
       public void windowActivated(WindowEvent arg0) {}
+      
       @Override
       public void windowClosed(WindowEvent arg0) {}
+      
       @Override
       public void windowClosing(WindowEvent arg0) {}
+      
+      //MAYBE: add listener to #frame, so when it regains focus it will close newFrame?
       @Override
-      public void windowDeactivated(WindowEvent arg0) {newFrame.dispose();} //MAYBE: add listener to #frame, so when it regains focus it will close newFrame?
+      public void windowDeactivated(WindowEvent arg0) {
+        newFrame.dispose(); 
+      }
+      
       @Override
       public void windowDeiconified(WindowEvent arg0) {}
+      
       @Override
       public void windowIconified(WindowEvent arg0) {}
+      
       @Override
       public void windowOpened(WindowEvent arg0) {}
     });

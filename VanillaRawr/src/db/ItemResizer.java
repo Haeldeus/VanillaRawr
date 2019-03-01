@@ -8,11 +8,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * A Class to resize the Info from the html-Pages to a format, that is useful for a Parser.
+ * A Class to resize the Info from the HTML-Pages to a format, that is useful for a Parser.
  * @author Haeldeus
  * @version 1.0
  */
 public class ItemResizer {
+  /**
+   * A Tokenizer, that is used to search the HTML-Document for a Statement, after which 
+   * the useful Info starts.
+   */
   private String tokenizer = "<table><tr><td><table><tr><td>";
   
   /**

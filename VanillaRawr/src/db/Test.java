@@ -213,11 +213,12 @@ public class Test {
     
     System.out.println("Test ended! If there are no other Messages, the Database is complete and "
         + "correct.");
-    System.out.println(impl + "/" + all + " - " + ((double)(impl) / (double)(all) * 100 + "% done"));
-  //  System.out.println(util.DatabaseConnecter.getAllIDs().length);
-//    tmp = db.random.weapons.melee.Daggers.getList();
-//    for (MultiBonus mb : tmp) {
-//      mb.getAllItems();
-//    }
+    System.out.println(impl + "/" + all + " - " + ((double)(impl) / (double)(all) * 100 
+        + "% done"));
+    //  System.out.println(util.DatabaseConnecter.getAllIDs().length);
+    //    tmp = db.random.weapons.melee.Daggers.getList();
+    //    for (MultiBonus mb : tmp) {
+    //      mb.getAllItems();
+    //    }
   }
 }

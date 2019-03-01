@@ -45,9 +45,9 @@ public class Parser {
         System.out.println(tokens.size());
         br.close();
       } catch (FileNotFoundException e) {
-        System.err.println("There was an Error in finding the ID "+ id + ". Possible Solutions: a) "
-            + "Is the given path correct? (" + path + "). b) Check, if this is a valid ID. "
-                + "c) Rerun Downloader and ItemResizer.");
+        System.err.println("There was an Error in finding the ID " + id 
+            + ". Possible Solutions: a) " + "Is the given path correct? (" + path 
+            + "). b) Check, if this is a valid ID. " + "c) Rerun Downloader and ItemResizer.");
         e.printStackTrace();
       } catch (IOException e) {
         e.printStackTrace();
@@ -56,8 +56,8 @@ public class Parser {
   }
   
   public static void main(String[] args) {
-    String writePath = "C:" + File.separator + "Users" + File.separator + "Frederic" + File.separator
-        + "Desktop" + File.separator + "Items" + File.separator +"Shortened";
+    String writePath = "C:" + File.separator + "Users" + File.separator + "Frederic" 
+        + File.separator + "Desktop" + File.separator + "Items" + File.separator + "Shortened";
     Parser p = new Parser(writePath,"");
     p.parse();
   }

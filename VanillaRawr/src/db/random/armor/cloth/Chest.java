@@ -1,7 +1,6 @@
 package db.random.armor.cloth;
 
 import java.util.ArrayList;
-
 import util.MultiBonus;
 
 public class Chest {
@@ -14,9 +13,9 @@ public class Chest {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
     14172, 14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826,
     9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
-    14216, 14225, 7518, 7517, 9773, 
+    14216, 14225, 7518, 7517, 9773, 9774, 
     /*ToDo*/
-    9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
+    10143, 10135, 9798, 9791, 14254, 14249, 10254, 
     10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
     7468, 14326, 14318, 14127, 14133, 9905, 9913, 6609, 6610, 6567, 6569, 9749, 9748, 9874, 
     9884, 14202, 14204, 7429, 7430, 14213, 14215, 14180, 14184, 6538, 6536
@@ -84,11 +83,28 @@ public class Chest {
     fillGossamerRobe();
     fillGossamerTunic();
     fillGreenweaveRobe();
+    fillGreenweaveVest();
     
     System.out.println(list.get(list.size() - 1));
-    System.out.println(list.size() + "/" + ids.length);
+    System.out.println("Cloth Chests: " + list.size() + "/" + ids.length);
   }
   
+  private static void fillGreenweaveVest() {
+    int id = 9774;
+    MultiBonus greenweaveVest = new MultiBonus("Greenweave Vest", id);
+    greenweaveVest.createArcaneWrathTree(13, 14, 3.9);
+    greenweaveVest.createFrozenWrathTree(13, 14, 3.7);
+    greenweaveVest.createIntellectTree(9, 10, 13.2);
+    greenweaveVest.createShadowWrathTree(13, 14, 2.3);
+    greenweaveVest.createSpiritTree(9, 10, 6.8);
+    greenweaveVest.createStaminaTree(9, 10, 4.6);
+    
+    greenweaveVest.createEagleTree(5, 6, 15.5);
+    greenweaveVest.createOwlTree(5, 6, 37.7);
+    greenweaveVest.createWhaleTree(5, 6, 12.2);
+    list.add(greenweaveVest);
+  }
+
   private static void fillGreenweaveRobe() {
     int id = 9773;
     MultiBonus greenweaveRobe = new MultiBonus("Greenweave Robe", id);
