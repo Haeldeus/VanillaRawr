@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import util.MultiBonus;
 
-public class Staffs {
+public class Staves {
   
   private static ArrayList<MultiBonus> list;
 
@@ -41,6 +41,8 @@ public class Staffs {
     fillSpiritchaserStaff();
     fillSturdyQuarterstaff();
     fillThaumaturgistStaff();
+    System.out.println("Staves: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillThaumaturgistStaff() {

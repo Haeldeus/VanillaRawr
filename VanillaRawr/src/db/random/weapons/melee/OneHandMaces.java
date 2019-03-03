@@ -46,6 +46,8 @@ public class OneHandMaces {
     fillSmashingStar();
     fillStaunchHammer();
     fillStoutBattleHammer();
+    System.out.println("One-handed Maces: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillStoutBattleHammer() {

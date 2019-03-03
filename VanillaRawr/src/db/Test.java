@@ -35,9 +35,9 @@ public class Test {
     impl += tmp.size(); 
     all += db.random.weapons.melee.OneHandSwords.getIDs().length;
     
-    tmp = db.random.weapons.melee.Staffs.getList();
+    tmp = db.random.weapons.melee.Staves.getList();
     impl += tmp.size(); 
-    all += db.random.weapons.melee.Staffs.getIDs().length;
+    all += db.random.weapons.melee.Staves.getIDs().length;
     
     tmp = db.random.weapons.melee.TwoHandAxes.getList();
     impl += tmp.size(); 

@@ -50,8 +50,9 @@ public class Wrist {
     fillHeroicBracers();
     fillHighChiefsBindings();
     fillHyperionVambraces();
-    System.out.println(list.get(list.size() - 1));
-    System.out.println("Plate Wrists: " + list.size() + "/" + ids.length);
+    //System.out.println(list.get(list.size() - 1)); //Still need this, when adding new Items
+    System.out.println("Plate Wrists: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
     
   private static void fillHyperionVambraces() {

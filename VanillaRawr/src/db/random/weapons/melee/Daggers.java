@@ -69,6 +69,8 @@ public class Daggers {
     fillSacrificialKris();
     fillVorpalDagger();
     fillWarKnife();
+    System.out.println("Daggers: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   /**

@@ -34,7 +34,8 @@ public class Shield {
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     //  System.out.println(list.get(list.size() - 1));
-    System.out.println(list.size() + "/" + ids.length);
+    System.out.println("Shields: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
     
   public static void main(String[] args) {

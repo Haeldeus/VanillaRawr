@@ -46,6 +46,8 @@ public class TwoHandMaces {
     fillSequoiaBranch();
     fillSpikedClub();
     fillStoneHammer();
+    System.out.println("Two-handed Maces: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillStoneHammer() {

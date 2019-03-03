@@ -33,8 +33,9 @@ public class Wrist {
     list = new ArrayList<MultiBonus>();
     fillAbyssalClothWristbands();
     fillFlameweaveCuffs();
-    System.out.println(list.get(list.size() - 1));
-    System.out.println("Cloth Wrist: " + list.size() + "/" + ids.length);
+    //System.out.println(list.get(list.size() - 1)); //Still need this when adding more Items
+    System.out.println("Cloth Wrist: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
 
   private static void fillFlameweaveCuffs() {

@@ -86,9 +86,10 @@ public class Chest {
     fillGreenweaveRobe();
     fillGreenweaveVest();
     
-    System.out.println(list.get(list.size() - 1).getAllItems());
-    //System.out.println(list.get(list.size() - 1));
-    //System.out.println("Cloth Chests: " + list.size() + "/" + ids.length);
+    //System.out.println(list.get(list.size() - 1).getAllItems()); 
+    //System.out.println(list.get(list.size() - 1));  //Still need this when adding Items
+    System.out.println("Cloth Chests: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillGreenweaveVest() {

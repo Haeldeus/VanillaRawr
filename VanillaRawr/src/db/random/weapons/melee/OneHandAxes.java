@@ -73,6 +73,8 @@ public class OneHandAxes {
     fillScalpingTomahawk();
     fillSplittingHatchet();
     fillWarlordsAxe();
+    System.out.println("One-handed Axes: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   /**

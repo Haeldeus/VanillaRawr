@@ -34,17 +34,9 @@ public class Guns {
     fillPercussionShotgun();
     fillRicochetBlunderbuss();
     fillSharpshooterHarquebus();
-    fillSniperRifle(); /*
-    System.out.println(list.get(0));
-    System.out.println("-------------");
-    System.out.println(list.get(1));
-    System.out.println("-------------");
-    System.out.println(list.get(2));
-    System.out.println("-------------");
-    System.out.println(list.get(3));
-    System.out.println("-------------");
-    System.out.println(list.get(4));
-    System.out.println("-------------"); */
+    fillSniperRifle();
+    System.out.println("Guns: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
 
   private static void fillSniperRifle() {

@@ -50,6 +50,8 @@ public class TwoHandSwords {
     fillStoneclutterClaymore();
     fillTrainingSword();
     fillTuskerSword();
+    System.out.println("Two-handed Swords: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillTuskerSword() {

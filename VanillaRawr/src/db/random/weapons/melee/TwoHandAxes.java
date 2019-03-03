@@ -43,6 +43,8 @@ public class TwoHandAxes {
     fillRazorAxe();
     fillSeveringAxe();
     fillTwinbladedAxe();
+    System.out.println("Two-handed Axes: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillTwinbladedAxe() {

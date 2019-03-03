@@ -47,6 +47,8 @@ public class OneHandSwords {
     fillRuneSword();
     fillVikingSword();
     fillWidowBlade();
+    System.out.println("One-handed Swords: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillWidowBlade() {

@@ -34,8 +34,9 @@ public class Shoulder {
     fillBrutishShoulders();
     fillCommandersPauldrons();
     fillEmbossedPlatePauldrons();
-    System.out.println(list.get(list.size() - 1));
-    System.out.println(list.size() + "/" + ids.length);
+    //System.out.println(list.get(list.size() - 1)); //Still need this, when adding new Items
+    System.out.println("Plate Shoulders: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
     
   private static void fillEmbossedPlatePauldrons() {

@@ -37,23 +37,9 @@ public class Bows {
     fillHawkeyeBow();
     fillQuillfireBow();
     fillSiegeBow();
-    fillTrueshotBow(); /*
-    System.out.println(list.get(0));
-    System.out.println("-------------");
-    System.out.println(list.get(1));
-    System.out.println("-------------");
-    System.out.println(list.get(2));
-    System.out.println("-------------");
-    System.out.println(list.get(3));
-    System.out.println("-------------");
-    System.out.println(list.get(4));
-    System.out.println("-------------");
-    System.out.println(list.get(5));
-    System.out.println("-------------");
-    System.out.println(list.get(6));
-    System.out.println("-------------");
-    System.out.println(list.get(7));
-    System.out.println("-------------"); */
+    fillTrueshotBow();
+    System.out.println("Bows: " + list.size() + "/" + ids.length + " - " 
+        + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
   private static void fillTrueshotBow() {
