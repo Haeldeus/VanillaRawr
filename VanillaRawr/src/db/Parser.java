@@ -25,7 +25,7 @@ public class Parser {
   }
   
   public void parse() {
-//    int[] ids = DatabaseConnecter.getAllIDs();
+    //int[] ids = DatabaseConnecter.getAllIDs();
     int [] ids = {25, 13314, 19019};
     for (int id : ids) {
       try {

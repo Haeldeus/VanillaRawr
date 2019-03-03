@@ -6,12 +6,8 @@ package db.armor.basics;
  * @version 1.0
  */
 public enum ArmorStats {
-  /**
-   * The Entry for the Armor-Amount.
-   */
+  /** The value for the Armor-Amount. */
   Armor,
-  /**
-   * The Entry for the Level Requirement of this Item.
-   */
+  /** The value for the Level Requirement of this Item. */
   LvlReq
 }

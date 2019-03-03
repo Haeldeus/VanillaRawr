@@ -7,24 +7,14 @@ package db.weapon.basics;
  * @version 1.0
  */
 public enum WeaponStats {
-  /**
-   * The value, that represents the minimum Damage, the Weapon deals.
-   */
+  /** The value, that represents the minimum Damage, the Weapon deals. */
   MinDmg, 
-  /**
-   * The value, that represents the maximum Damage, the Weapon deals.
-   */
+  /** The value, that represents the maximum Damage, the Weapon deals. */
   MaxDmg, 
-  /**
-   * The value, that represents the Attack Speed of the Weapon.
-   */
+  /** The value, that represents the Attack Speed of the Weapon. */
   AttSpeed, 
-  /**
-   * The value, that represents the required Level to equip the Weapon.
-   */
+  /** The value, that represents the required Level to equip the Weapon. */
   LvlReq, 
-  /**
-   * The inherit Damage per second, that is displayed in the Tooltip of the Weapon.
-   */
+  /** The inherit Damage per second, that is displayed in the Tooltip of the Weapon. */
   DPS
 }

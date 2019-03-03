@@ -6,64 +6,34 @@ package db.weapon.basics;
  * @version 1.0
  */
 public enum WeaponClass {
-  /**
-   * The value, that represents a Dagger.
-   */
+  /** The value, that represents a Dagger. */
   Dagger, 
-  /**
-   * The value, that represents a Fist-Weapon.
-   */
+  /** The value, that represents a Fist-Weapon. */
   Fist, 
-  /**
-   * The value, that represents an one-handed Axe.
-   */
+  /** The value, that represents an one-handed Axe. */
   OneHandedAxe, 
-  /**
-   * The value, that represents an one-handed Mace.
-   */
+  /** The value, that represents an one-handed Mace. */
   OneHandedMace, 
-  /**
-   * The value, that represents an one-handed Sword.
-   */
+  /** The value, that represents an one-handed Sword. */
   OneHandedSword, 
-  /**
-   * The value, that represents a Polearm.
-   */
+  /** The value, that represents a Polearm. */
   Polearm, 
-  /**
-   * The value, that represents a Staff.
-   */
+  /** The value, that represents a Staff. */
   Staff, 
-  /**
-   * The value, that represents a two-handed Axe.
-   */
+  /** The value, that represents a two-handed Axe. */
   TwoHandedAxe, 
-  /**
-   * The value, that represents a two-handed Mace.
-   */
+  /** The value, that represents a two-handed Mace. */
   TwoHandedMace, 
-  /**
-   * The value, that represents a two-handed Sword.
-   */
+  /** The value, that represents a two-handed Sword. */
   TwoHandedSword, 
-  /**
-   * The value, that represents a Bow.
-   */
+  /** The value, that represents a Bow. */
   Bow, 
-  /**
-   * The value, that represents a Crossbow.
-   */
+  /** The value, that represents a Crossbow. */
   Crossbow, 
-  /**
-   * The value, that represents a Gun.
-   */
+  /** The value, that represents a Gun. */
   Gun, 
-  /**
-   * The value, that represents a Thrown weapon.
-   */
+  /** The value, that represents a Thrown weapon. */
   Thrown, 
-  /**
-   * The value, that represents a Wand.
-   */
+  /** The value, that represents a Wand. */
   Wand 
 }

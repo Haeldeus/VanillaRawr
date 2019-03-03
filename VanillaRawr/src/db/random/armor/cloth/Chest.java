@@ -25,6 +25,7 @@ public class Chest {
    * Returns a List of all Cloth-Chests with Random Boni in the Game.
    * @return  An {@link ArrayList} of {@link MultiBonus}, that represents all Cloth-Chests with
    *     Random Boni, that are available in the Game.
+   * @since 1.0
    */
   public static ArrayList<MultiBonus> getList() {
     if (list == null) {
@@ -86,8 +87,8 @@ public class Chest {
     fillGreenweaveVest();
     
     System.out.println(list.get(list.size() - 1).getAllItems());
-//    System.out.println(list.get(list.size() - 1));
-//    System.out.println("Cloth Chests: " + list.size() + "/" + ids.length);
+    //System.out.println(list.get(list.size() - 1));
+    //System.out.println("Cloth Chests: " + list.size() + "/" + ids.length);
   }
   
   private static void fillGreenweaveVest() {

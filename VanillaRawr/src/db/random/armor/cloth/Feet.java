@@ -30,7 +30,7 @@ public class Feet {
   
   private static void fill() {
     list = new ArrayList<MultiBonus>();
-  //  System.out.println(list.get(list.size() - 1));
+    //System.out.println(list.get(list.size() - 1));
     System.out.println("Cloth Feet: " + list.size() + "/" + ids.length);
   }
   

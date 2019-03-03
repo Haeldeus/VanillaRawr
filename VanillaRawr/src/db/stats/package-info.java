@@ -2,6 +2,6 @@
  * @author Haeldeus
  *
  */
-package math;
+package db.stats;
 
 //TODO

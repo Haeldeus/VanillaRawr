@@ -6,60 +6,32 @@ package db.armor.basics;
  * @version 1.0
  */
 public enum ArmorSlots {
-  /**
-   * The Entry for the Head-Slot.
-   */
+  /** The value for the Head-Slot. */
   Head,
-  /**
-   * The Entry for the Neck-Slot.
-   */
+  /** The value for the Neck-Slot. */
   Neck, 
-  /**
-   * The Entry for the Shoulder-Slot.
-   */
+  /** The value for the Shoulder-Slot. */
   Shoulder, 
-  /**
-   * The Entry for the Back-Slot.
-   */
+  /** The value for the Back-Slot. */
   Back, 
-  /**
-   * The Entry for the Chest-Slot.
-   */
+  /**The value for the Chest-Slot. */
   Chest, 
-  /**
-   * The Entry for the Shirt-Slot.
-   */
+  /** The value for the Shirt-Slot. */
   Shirt, 
-  /**
-   * The Entry for the Tabard-Slot.
-   */
+  /** The value for the Tabard-Slot. */
   Tabard, 
-  /**
-   * The Entry for the Wrist-Slot.
-   */
+  /** The value for the Wrist-Slot. */
   Wrist, 
-  /**
-   * The Entry for the Hands-Slot.
-   */
+  /** The value for the Hands-Slot. */
   Hands, 
-  /**
-   * The Entry for the Waist-Slot.
-   */
+  /** The value for the Waist-Slot. */
   Waist, 
-  /**
-   * The Entry for the Pants-Slot.
-   */
+  /** The value for the Pants-Slot. */
   Pants, 
-  /**
-   * The Entry for the Feet-Slot.
-   */
+  /** The value for the Feet-Slot. */
   Feet, 
-  /**
-   * The Entry for the Ring-Slot.
-   */
+  /** The value for the Ring-Slot. */
   Ring, 
-  /**
-   * The Entry for the Trinket-Slot.
-   */
+  /** The value for the Trinket-Slot. */
   Trinket 
 }
