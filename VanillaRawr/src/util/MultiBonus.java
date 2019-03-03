@@ -48,7 +48,6 @@ public class MultiBonus {
    * @since 1.0
    */
   public void addDefaultBonus(Stat stat, int amount) {
-    //TODO implement default bonus
     defaultBonus = stat;
     amountBonus = amount;
   }
@@ -644,14 +643,16 @@ public class MultiBonus {
   }
   
   /**
-   * A Method, that returns every single Item, that is possible with its' given MultiBonus-Trees.
-   * <br>E.g., if an Item has +(5-7) Intelligence, this Method returns an Instance of {@link Item} 
-   * with +5 Intelligence, another one with +6 Intelligence and a last one with +7 Intelligence. 
+   * A Method, that returns every single Item, that is possible with its' given MultiBonus-Trees as 
+   * an {@link ArrayList} of {@link HashMap}s, that resemble the Stats, this Item might have.
+   * <br>E.g., if an Item has +(5-7) Intelligence, this Method returns a List with the Values for 
+   * an Item with +5 Intelligence, another Entry for one with +6 Intelligence and a last one 
+   * with +7 Intelligence. 
    * <br>If there are even more Possibilities, with other Stats or even combined Stats, this Method 
-   * returns these Items as well.
-   * @return {@code null} at this Time, as this Method has to be finished.
+   * returns these Entries as well.
+   * @return An {@link ArrayList} of {@link HashMap}s, that resembles all possible Stats for this 
+   *     Item.
    * @since 1.0
-   * @see Item
    */
   public ArrayList<HashMap<Stat, Integer>> getAllItems() {
     ArrayList<HashMap<Stat, Integer>> res = new ArrayList<HashMap<Stat, Integer>>();
@@ -660,30 +661,58 @@ public class MultiBonus {
       int defaultAmount = t.getDefaultAmount();
       SubTree left = t.getLeft();
       SubTree right = t.getRight();
+      SubTree middle = t.getMiddle();
       for (int i = left.getLower(); i <= left.getUpper(); i++) {
         HashMap<Stat, Integer> tmp = new HashMap<Stat, Integer>();
         try {
           for (int j = right.getLower(); j <= right.getUpper(); j++) {
-            tmp = new HashMap<Stat, Integer>();
-            if (stat == null) {
-              System.out.println(this.getName() + t.getName() + ": +" 
-                  + i + " " + left.getAttribute().toString() + ", +" + j + " " 
-                  + right.getAttribute());
-              tmp.put(left.getAttribute(), i);
-              tmp.put(right.getAttribute(), j);
-            } else {
-              System.out.println(this.getName() + t.getName() + ": +" 
-                  + defaultAmount + " " + stat + ", " + i + " " 
-                  + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
-              tmp.put(stat, defaultAmount);
-              tmp.put(left.getAttribute(), i);
-              tmp.put(right.getAttribute(), j);
+            try {
+              for (int k = middle.getLower(); k <= middle.getUpper(); k++) {
+                tmp = new HashMap<Stat, Integer>();
+                if (stat == null) {
+                  System.out.println(this.getName() + t.getName() + ": +" 
+                      + i + " " + left.getAttribute().toString() + ", +" + k + " " 
+                      + middle.getAttribute() + ", +" + j + " " + right.getAttribute());
+                  tmp.put(left.getAttribute(), i);
+                  tmp.put(middle.getAttribute(), k);
+                  tmp.put(right.getAttribute(), j);
+                } else {
+                  System.out.println(this.getName() + t.getName() + ": +" 
+                      + defaultAmount + " " + stat + ", " + i + " " 
+                      + left.getAttribute().toString() + ", +" + k + " " 
+                      + middle.getAttribute() + ", +" + j + " " + right.getAttribute());
+                  tmp.put(stat, defaultAmount);
+                  tmp.put(left.getAttribute(), i);
+                  tmp.put(middle.getAttribute(), k);
+                  tmp.put(right.getAttribute(), j);
+                }
+                res.add(tmp);
+              }
+            /*
+             * This Catch is necessary, in case the Item has only 2 Stats in one of it's Trees.
+             */
+            } catch (Exception e) {
+              tmp = new HashMap<Stat, Integer>();
+              if (stat == null) {
+                System.out.println(this.getName() + t.getName() + ": +" 
+                    + i + " " + left.getAttribute().toString() + ", +" + j + " " 
+                    + right.getAttribute());
+                tmp.put(left.getAttribute(), i);
+                tmp.put(right.getAttribute(), j);
+              } else {
+                System.out.println(this.getName() + t.getName() + ": +" 
+                    + defaultAmount + " " + stat + ", " + i + " " 
+                    + left.getAttribute().toString() + ", +" + j + " " + right.getAttribute());
+                tmp.put(stat, defaultAmount);
+                tmp.put(left.getAttribute(), i);
+                tmp.put(right.getAttribute(), j);
+              }
+              res.add(tmp);
             }
-            res.add(tmp);
           } 
-          /*
-           * This Catch is necessary, in case the Item has a single Stat in one of it's Trees.
-           */
+        /*
+         * This Catch is necessary, in case the Item has a single Stat in one of it's Trees.
+         */
         } catch (Exception e) {
           if (stat == null) {
             System.out.println(this.getName() + t.getName() + ": +" + i + " " 
@@ -699,8 +728,6 @@ public class MultiBonus {
         }
       }
     }
-    System.out.println(res.toString());
     return res;
-    //TODO Finish this Method!
   }
 }
