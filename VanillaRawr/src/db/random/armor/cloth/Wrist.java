@@ -19,8 +19,9 @@ public class Wrist {
   };
   
   public static ArrayList<MultiBonus> getList() {
-    if (list == null)
+    if (list == null) {
       fill();
+    }
     return list;
   }
   

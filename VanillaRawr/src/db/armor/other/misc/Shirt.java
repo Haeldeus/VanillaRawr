@@ -56,22 +56,25 @@ public class Shirt {
   
   public static int[] getIDs() {
     int[] res = new int[shirts.length];
-    for (int i = 0; i < shirts.length; i++)
+    for (int i = 0; i < shirts.length; i++) {
       res[i] = (int)shirts[i][0];
+    }
     return res;
   }
   
   public static String[] getIcons() {
     String[] res = new String[shirts.length];
-    for (int i = 0; i < shirts.length; i++)
+    for (int i = 0; i < shirts.length; i++) {
       res[i] = (String)shirts[i][1];
+    }
     return res;
   }
   
   public static String[] getNames() {
     String[] res = new String[shirts.length];
-    for (int i = 0; i < shirts.length; i++)
+    for (int i = 0; i < shirts.length; i++) {
       res[i] = (String)shirts[i][2];
+    }
     return res;
   }
   
@@ -79,7 +82,8 @@ public class Shirt {
     int[] t1 = getIDs();
     String[] t2 = getIcons();
     String[] t3 = getNames();
-    for (int i = 0; i < t1.length; i++)
+    for (int i = 0; i < t1.length; i++) {
       System.out.println(t1[i] + ", " + t2[i] + ", " + t3[i]);
+    }
   }
 }

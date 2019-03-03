@@ -14,24 +14,24 @@ public class Head {
     10219, 14228, 14332, 14271, 14220, 7520, 10139, 14252, 10250, 10175, 14281, 14189, 7470, 
     14322, 9915, 10288, 9878, 14200, 7432, 14208, 14178, 
   };
-	
+  
   public static ArrayList<MultiBonus> getList() {
     if (list == null) {
       fill();
     }
     return list;
   }
-	    
+  
   public static int[] getIDs() {
     return ids;
   }
-	    
+  
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     //  System.out.println(list.get(list.size() - 1));
     System.out.println("Cloth Head: " + list.size() + "/" + ids.length);
   }
-	    
+  
   public static void main(String[] args) {
     fill();
   }

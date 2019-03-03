@@ -16,24 +16,24 @@ public class Hands {
       10176, 14282, 14162, 14191, 7471, 14323, 9390, 14124, 9910, 6615, 6565, 9880, 14199, 
       7433, 14211, 14181, 6541, 
   };
-	
+  
   public static ArrayList<MultiBonus> getList() {
     if (list == null) {
       fill();
     }
     return list;
   }
-	
+  
   public static int[] getIDs() {
     return ids;
   }
-	
+  
   private static void fill() {
     list = new ArrayList<MultiBonus>();
     //  System.out.println(list.get(list.size() - 1));
     System.out.println("Cloth Hands: " + list.size() + "/" + ids.length);
   }
-	
+  
   public static void main(String[] args) {
     fill();
   }
