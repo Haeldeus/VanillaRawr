@@ -41,7 +41,7 @@ public class Daggers {
   
   /**
    * Returns all ID's.
-   * @return The ID's of all Daggers as an Array of Integers.
+   * @return The ID's of all Daggers with a MultiBonus as an Array of Integers.
    * @since 1.0
    */
   public static int[] getIDs() {
@@ -74,7 +74,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=4571">War Knife</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=4571">War Knife</a> to the List.
    * @since 1.0
    */
   private static void fillWarKnife() {
@@ -94,7 +94,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15245">Vorpal Dagger</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15245">Vorpal Dagger</a> to the List.
    * @since 1.0
    */
   private static void fillVorpalDagger() {
@@ -118,7 +118,7 @@ public class Daggers {
   }
 
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=3187">Sacrificial Kris</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=3187">Sacrificial Kris</a> to the List.
    * @since 1.0
    */
   private static void fillSacrificialKris() {
@@ -143,7 +143,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15244">Razor Blade</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15244">Razor Blade</a> to the List.
    * @since 1.0
    */
   private static void fillRazorBlade() {
@@ -167,7 +167,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=3184">Hook Dagger</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=3184">Hook Dagger</a> to the List.
    * @since 1.0
    */
   private static void fillHookDagger() {
@@ -186,7 +186,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15242">Honed Stiletto</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15242">Honed Stiletto</a> to the List.
    * @since 1.0
    */
   private static void fillHonedStiletto() {
@@ -210,7 +210,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=4088">Dread Blade</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=4088">Dread Blade</a> to the List.
    * @since 1.0
    */
   private static void fillDreadBlade() {
@@ -234,7 +234,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15246">Demon Blade</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15246">Demon Blade</a> to the List.
    * @since 1.0
    */
   private static void fillDemonBlade() {
@@ -258,7 +258,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15243">Deadly Kris</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15243">Deadly Kris</a> to the List.
    * @since 1.0
    */
   private static void fillDeadlyKris() {
@@ -282,7 +282,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=2632">Curved Dagger</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=2632">Curved Dagger</a> to the List.
    * @since 1.0
    */
   private static void fillCurvedDagger() {
@@ -302,7 +302,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15241">Battle Knife</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15241">Battle Knife</a> to the List.
    * @since 1.0
    */
   private static void fillBattleKnife() {
@@ -326,7 +326,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=2140">Carving Knife</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=2140">Carving Knife</a> to the List.
    * @since 1.0
    */
   private static void fillCarvingKnife() {
@@ -347,7 +347,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=2819">Cross Dagger</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=2819">Cross Dagger</a> to the List.
    * @since 1.0
    */
   private static void fillCrossDagger() {
@@ -371,7 +371,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15247">Bloodstrike Dagger</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15247">Bloodstrike Dagger</a> to the List.
    * @since 1.0
    */
   private static void fillBloodstrikeDagger() {
@@ -395,7 +395,7 @@ public class Daggers {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=10828">Dire Nail</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=10828">Dire Nail</a> to the List.
    * @since 1.0
    */
   private static void fillDireNail() { //+5 Shadow Resistance on default!

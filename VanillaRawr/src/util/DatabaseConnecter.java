@@ -12,10 +12,13 @@ public class DatabaseConnecter {
   
   /**
    * Returns all IDs, that are used by Items.
-   * @return  All IDs, that are used by Items.
+   * @return  All IDs, that are used by Items as an Array of Integers.
    * @since 1.0
    */
   public static int[] getAllIDs() {
+    /*Storing the IDs in an ArrayList is dynamic, so it's easier to be coded this way. 
+     * It has to be passed to the Object as an Array because of spaghetti Code in the 
+     * other Classes*/
     ArrayList<int[]> list = new ArrayList<int[]>();
     int[] clothChest = db.armor.cloth.Chest.getIDs(); 
     list.add(clothChest);
@@ -142,20 +145,24 @@ public class DatabaseConnecter {
     int[] thSword = db.weapon.twohanded.Sword.getIDs();
     list.add(thSword);
     
-    int[] result;
-    int size;
+    int[] result;   //The Array, that will be returned later
+    int size;       //The Size of the Array to be returned. Will be computed in the next step.
     
     size = 0;
     for (int[] i : list) {
-      size += i.length;
+      //The Array needs to have the length of all other Array's lengths combined.
+      size += i.length;   
     }
 
-    result = new int[size];
-    Integer index = 0;
+    result = new int[size];   //Size is now definite, so the Array can be created
     
-    addListToArray(result, list, index);
+    //Still not sure, if this is really needed, as the next Method doesn't use this Parameter
+    Integer index = 0;        
     
-    quickSort(result, 0, result.length - 1);
+    addListToArray(result, list, index);  //Adds the List to the Array to be returned.
+    
+    //Sorts the Array alphabetically to make it easier to use.
+    quickSort(result, 0, result.length - 1);  
     /*
     for (int i = 0; i < result.length; i++) {
       if ((i+1)%10 != 0)
@@ -167,9 +174,12 @@ public class DatabaseConnecter {
       }
     } */
     
+    //A Check, if every Item from the List was added to the Array. 
+    //If so, the Array is complete and can be used.
     if (check(result, list)) {
       return result;
-    } else {
+    } else {  //Throws an Error to ensure, the User can see that something went wrong. 
+      //TODO sysclose?
       Exception e = new Exception("An Error happened. Not all IDs were assigned "
           + "correctly. Please check the code!");
       System.err.println(e);
@@ -179,10 +189,14 @@ public class DatabaseConnecter {
 
   /**
    * Returns all Itemnames.
-   * @return  The Names of all Items, that are used in the Database.
+   * @return  The Names of all Items, that are used in the Database as an Array of Strings.
    * @since 1.0
    */
   public static String[] getAllNames() {
+    /*Storing the IDs in an ArrayList is dynamic, so it's easier to be coded this way. 
+     * It has to be passed to the Object as an Array because of spaghetti Code in the 
+     * other Classes*/
+    //TODO Commentary
     ArrayList<String[]> list = new ArrayList<String[]>();
     String[] clothChest = db.armor.cloth.Chest.getNames();
     list.add(clothChest);
@@ -333,10 +347,13 @@ public class DatabaseConnecter {
 
   /**
    * Returns all Icons, that are used by Items.
-   * @return All Icons, that are used by the Items in the Database.
+   * @return All Icons, that are used by the Items in the Database as an Array of Strings.
    * @since 1.0
    */
   public static String[] getAllIcons() {
+    /*Storing the IDs in an ArrayList is dynamic, so it's easier to be coded this way. 
+     * It has to be passed to the Object as an Array because of spaghetti Code in the 
+     * other Classes*/
     ArrayList<String[]> list = new ArrayList<String[]>();
     String[] clothChest = db.armor.cloth.Chest.getIcons();
     list.add(clothChest);

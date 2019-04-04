@@ -78,7 +78,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15238">Warlord's Axe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15238">Warlord's Axe</a> to the List.
    * @since 1.0
    */
   private static void fillWarlordsAxe() {
@@ -100,7 +100,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15231">Splitting Hatchet</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15231">Splitting Hatchet</a> to the List.
    * @since 1.0
    */
   private static void fillSplittingHatchet() {
@@ -122,7 +122,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=4561">Scalping Tomahawk</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=4561">Scalping Tomahawk</a> to the List.
    * @since 1.0
    */
   private static void fillScalpingTomahawk() {
@@ -136,7 +136,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15233">Savage Axe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15233">Savage Axe</a> to the List.
    * @since 1.0
    */
   private static void fillSavageAxe() {
@@ -158,7 +158,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15230">Ridge Cleaver</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15230">Ridge Cleaver</a> to the List.
    * @since 1.0
    */
   private static void fillRidgeCleaver() {
@@ -180,7 +180,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15236">Moon Cleaver</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15236">Moon Cleaver</a> to the List.
    * @since 1.0
    */
   private static void fillMoonCleaver() {
@@ -202,7 +202,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=2080">Hillborne Axe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=2080">Hillborne Axe</a> to the List.
    * @since 1.0
    */
   private static void fillHillborneAxe() {
@@ -224,7 +224,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15232">Hacking Cleaver</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15232">Hacking Cleaver</a> to the List.
    * @since 1.0
    */
   private static void fillHackingCleaver() {
@@ -246,7 +246,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=4568">Grunt Axe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=4568">Grunt Axe</a> to the List.
    * @since 1.0
    */
   private static void fillGruntAxe() {
@@ -260,7 +260,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15234">Greater Scythe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15234">Greater Scythe</a> to the List.
    * @since 1.0
    */
   private static void fillGreaterScythe() {
@@ -282,7 +282,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=863">Gloom Reaper</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=863">Gloom Reaper</a> to the List.
    * @since 1.0
    */
   private static void fillGloomReaper() {
@@ -304,7 +304,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=790">Forester's Axe</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=790">Forester's Axe</a> to the List.
    * @since 1.0
    */
   private static void fillForestersAxe() {
@@ -326,7 +326,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15239">Felstone Reaver</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15239">Felstone Reaver</a> to the List.
    * @since 1.0
    */
   private static void fillFelstoneReaver() {
@@ -348,7 +348,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=1994">Ebonclaw Reaver</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=1994">Ebonclaw Reaver</a> to the List.
    * @since 1.0
    */
   private static void fillEbonclawReaver() {
@@ -370,7 +370,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=2073">Dwarven Hatchet</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=2073">Dwarven Hatchet</a> to the List.
    * @since 1.0
    */
   private static void fillDwarvenHatchet() {
@@ -384,7 +384,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15240">Demon's Claw</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15240">Demon's Claw</a> to the List.
    * @since 1.0
    */
   private static void fillDemonsClaw() {
@@ -406,7 +406,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15235">Crescent Edge</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15235">Crescent Edge</a> to the List.
    * @since 1.0
    */
   private static void fillCrescentEdge() {
@@ -428,7 +428,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=15237">Corpse Harvester</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=15237">Corpse Harvester</a> to the List.
    * @since 1.0
    */
   private static void fillCorpseHarvester() {
@@ -450,7 +450,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=19921">Zulian Hacker</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=19921">Zulian Hacker</a> to the List.
    * @since 1.0
    */
   private static void fillZulianHacker() {  //Adds +2 Axes per default!
@@ -472,7 +472,7 @@ public class OneHandAxes {
   }
   
   /**
-   * Adds the <a href="db.vanillagaming.org/?item=12527">Ribsplitter</a> to the List.
+   * Adds the <a href="http://db.vanillagaming.org/?item=12527">Ribsplitter</a> to the List.
    * @since 1.0
    */
   private static void fillRibsplitter() {    //Adds 10 AP per default!

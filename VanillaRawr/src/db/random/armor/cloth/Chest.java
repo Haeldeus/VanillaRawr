@@ -3,19 +3,32 @@ package db.random.armor.cloth;
 import java.util.ArrayList;
 import util.MultiBonus;
 
+/**
+ * A Class, that stores all Cloth Chests with MultiBonus. They can be accessed by calling {@link 
+ * #getList()}.
+ * @author Haeldeus
+ * @version 1.0
+ */
 public class Chest {
 
   private String warningString; //Used to create a Warning in Eclipse to see, which Classes are still missing, delete this after Completion!
 
+  /**
+   * A List, that saves every Cloth Chest, that has a MultiBonus. These Items are saved as an 
+   * {@link ArrayList} of {@link MultiBonus}.
+   */
   private static ArrayList<MultiBonus> list;
   
+  /**
+   * The ID's of all Cloth Chests with MultiBonus.
+   */
   private static int[] ids = {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
     14172, 14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826,
     9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
-    14216, 14225, 7518, 7517, 9773, 9774, 
+    14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 
     /*ToDo*/
-    10143, 10135, 9798, 9791, 14254, 14249, 10254, 
+    9791, 14254, 14249, 10254, 
     10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
     7468, 14326, 14318, 14127, 14133, 9905, 9913, 6609, 6610, 6567, 6569, 9749, 9748, 9874, 
     9884, 14202, 14204, 7429, 7430, 14213, 14215, 14180, 14184, 6538, 6536
@@ -34,10 +47,19 @@ public class Chest {
     return list;
   }
   
+  /**
+   * Returns all ID's.
+   * @return The ID's of all Cloth Chests with a MultiBonus as an Array of Integers.
+   * @since 1.0
+   */
   public static int[] getIDs() {
     return ids;
   }
   
+  /**
+   * Fills the {@link #list} with all Cloth Chests, that have a MultiBonus.
+   * @since 1.0
+   */
   private static void fill() {
     System.err.println("Not all ID's built in yet, use with caution!");
     list = new ArrayList<MultiBonus>();
@@ -85,13 +107,85 @@ public class Chest {
     fillGossamerTunic();
     fillGreenweaveRobe();
     fillGreenweaveVest();
+    fillHighCouncillorsRobe();
+    fillHighCouncillorsTunic();
+    fillIvyclothRobe();
+    fillIvyclothTunic();
     
-    //System.out.println(list.get(list.size() - 1).getAllItems()); 
-    //System.out.println(list.get(list.size() - 1));  //Still need this when adding Items
+    System.out.println(list.get(list.size() - 1).getAllItems()); 
+    System.out.println(list.get(list.size() - 1));  //Still need this when adding Items
     System.out.println("Cloth Chests: " + list.size() + "/" + ids.length + " - " 
         + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
+  private static void fillIvyclothTunic() {
+    int id = 9791;
+    MultiBonus ivyclothTunic = new MultiBonus("Ivycloth Tunic", id);
+    //TODO
+    list.add(ivyclothTunic);
+  }
+
+  /**
+   * Adds the <a href="http://db.vanillagaming.org/?item=9798">Ivycloth Robe</a> to the List.
+   * @since 1.0
+   */
+  private static void fillIvyclothRobe() {
+    int id = 9798;
+    MultiBonus ivyclothRobe = new MultiBonus("Ivycloth Robe", id);
+    ivyclothRobe.createArcaneWrathTree(14, 16, 4.4);
+    ivyclothRobe.createFrozenWrathTree(14, 16, 4.7);
+    ivyclothRobe.createIntellectTree(10, 11, 9.3);
+    ivyclothRobe.createShadowWrathTree(14, 16, 4.4);
+    ivyclothRobe.createSpiritTree(10, 11, 8.7);
+    ivyclothRobe.createStaminaTree(10, 11, 7.5);
+    
+    ivyclothRobe.createEagleTree(6, 7, 17.3);
+    ivyclothRobe.createOwlTree(6, 7, 27.0);
+    ivyclothRobe.createWhaleTree(6, 7, 16.8);
+    list.add(ivyclothRobe);
+  }
+
+  private static void fillHighCouncillorsTunic() {
+    int id = 10135;
+    MultiBonus highCouncillorsTunic = new MultiBonus("High Councillor's Tunic", id);
+    highCouncillorsTunic.createArcaneResistanceTree(29, 29, 0.2);
+    highCouncillorsTunic.createArcaneWrathTree(40, 41, 7.6);
+    highCouncillorsTunic.createFireResistanceTree(29, 29, 0.2);
+    highCouncillorsTunic.createFrostResistanceTree(29, 29, 0.1);
+    highCouncillorsTunic.createFrozenWrathTree(40, 41, 8.4);
+    highCouncillorsTunic.createIntellectTree(28, 29, 7.6);
+    highCouncillorsTunic.createShadowResistanceTree(28, 28, 0.1);
+    highCouncillorsTunic.createShadowWrathTree(40, 41, 8.5);
+    highCouncillorsTunic.createSpiritTree(28, 29, 5.8);
+    highCouncillorsTunic.createStaminaTree(28, 29, 5.2);
+    
+    highCouncillorsTunic.createEagleTree(18, 19, 17.9);
+    highCouncillorsTunic.createOwlTree(18, 19, 24.1);
+    highCouncillorsTunic.createWhaleTree(18, 19, 14.3);
+    list.add(highCouncillorsTunic);
+  }
+  
+  private static void fillHighCouncillorsRobe() {
+    int id = 10143;
+    MultiBonus highCouncillorsRobe = new MultiBonus("High Councillor's Robe", id);
+    highCouncillorsRobe.createArcaneResistanceTree(29, 29, 0.2);
+    highCouncillorsRobe.createArcaneWrathTree(40, 41, 8.1);
+    highCouncillorsRobe.createFireResistanceTree(29, 29, 0.1);
+    highCouncillorsRobe.createFrostResistanceTree(29, 29, 0.2);
+    highCouncillorsRobe.createFrozenWrathTree(40, 41, 8.5);
+    highCouncillorsRobe.createIntellectTree(28, 29, 7.7);
+    highCouncillorsRobe.createNatureResistanceTree(29, 29, 0.1);
+    highCouncillorsRobe.createShadowResistanceTree(29, 29, 0.1);
+    highCouncillorsRobe.createShadowWrathTree(40, 41, 7.8);
+    highCouncillorsRobe.createSpiritTree(28, 29, 5.3);
+    highCouncillorsRobe.createStaminaTree(28, 29, 5.7);
+    
+    highCouncillorsRobe.createEagleTree(18, 19, 17.6);
+    highCouncillorsRobe.createOwlTree(18, 19, 25.1);
+    highCouncillorsRobe.createWhaleTree(18, 19, 13.6);
+    list.add(highCouncillorsRobe);
+  }
+
   private static void fillGreenweaveVest() {
     int id = 9774;
     MultiBonus greenweaveVest = new MultiBonus("Greenweave Vest", id);

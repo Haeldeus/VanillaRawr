@@ -25,9 +25,9 @@ public class ImageChecker {
    * @since 1.0
    */
   private static void getImages() {
-    String[] tmp = DatabaseConnecter.getAllIcons();
+    String[] tmp = DatabaseConnecter.getAllIcons(); //Gets all ImageNames from the DB
     for (String s : tmp) {
-      images.put(s, false);
+      images.put(s, false);   //As long as the Image wasn't checked, we assume it's not available.
       //imageStrings = tmp;
     }
   }
@@ -38,16 +38,21 @@ public class ImageChecker {
    * @since 1.0
    */
   public static void main(String[] args) {
-    getImages();
+    getImages();    //Gets all ImageNames from the Database
+    //The KeySet eliminates all duplicates in the HashMap and returns a consistent Set.
     Set<String> keys = images.keySet();
-    int i = 0;
-    for (String s : keys) {
-      if (images.get(s) == false) {
-        String tmp = s.toLowerCase();
+    int i = 0;  //Just a counter to check how many Images are still missing.
+    for (String key : keys) { //Checks every Image in the HashMap
+      if (images.get(key) == false) { //It's false, if it wasn't checked before.
+        String tmp = key.toLowerCase(); //The images are stored in lower case Filenames.
         try {
+          //If a new Icon can be created, the File exists
           new ImageIcon(ImageChecker.class.getResource("/resources/" + tmp + ".jpg"));
-          i++;
-          images.put(s, true);
+          //The Line before would have thrown an Exception if the File was missing, so we raise 
+          //the counter.
+          i++;  
+          //The File exists, so we can put the Value on true, so it doesn't get checked again.
+          images.put(key, true);
         } catch (Exception e) {
           System.out.println(tmp + " is missing");
           System.out.println(i + "/" + keys.size());
