@@ -444,6 +444,22 @@ public class MultiBonus {
   }
   
   /**
+   * Creates a {@link Tree} of the Whale for this Item with the given Stat-borders, which may be 
+   * different to each other and the Chance, this Item comes with this Tree as a Bonus.
+   * @param lowerFirst The lower Border for the Spirit Stat.
+   * @param upperFirst The upper Border for the Spirit Stat.
+   * @param lowerSecond The lower Border for the Stamina Stat.
+   * @param upperSecond The upper Border for the Stamina Stat.
+   * @param chance The chance, that the Item has this Bonus.
+   * @since 1.0
+   */
+  public void createWhaleTreeDiff(int lowerFirst, int upperFirst, int lowerSecond, 
+      int upperSecond, double chance) {
+    addToList(createTree(" of the Whale", createSubTree(Stat.Spirit, lowerFirst, upperFirst), 
+        createSubTree(Stat.Stamina, lowerSecond, upperSecond), chance));
+  }
+  
+  /**
    * Creates a {@link Tree} of the Wolf for this Item with the given Stat-borders and the chance, 
    * this Item comes with this Bonus.
    * @param lower The lower border for this Tree.

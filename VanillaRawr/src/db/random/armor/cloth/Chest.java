@@ -26,10 +26,10 @@ public class Chest {
     /*Done*/9943, 9946, 14120, 14121, 14288, 14297, 14091, 14094, 14267, 14265, 14303, 14306, 
     14172, 14175, 14317, 14308, 9852, 9844, 10102, 10104, 14237, 14244, 6512, 6266, 9826,
     9819, 10065, 10057, 7353, 7369, 10215, 10218, 14234, 14230, 14328, 14336, 14275, 14277, 
-    14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 
+    14216, 14225, 7518, 7517, 9773, 9774, 10143, 10135, 9798, 9791, 14254, 14249, 10254, 
+    10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 
     /*ToDo*/
-    9791, 14254, 14249, 10254, 
-    10246, 10181, 10178, 14109, 14096, 14284, 14287, 14158, 14163, 14192, 14190, 7332, 
+    7332, 
     7468, 14326, 14318, 14127, 14133, 9905, 9913, 6609, 6610, 6567, 6569, 9749, 9748, 9874, 
     9884, 14202, 14204, 7429, 7430, 14213, 14215, 14180, 14184, 6538, 6536
   };
@@ -111,6 +111,21 @@ public class Chest {
     fillHighCouncillorsTunic();
     fillIvyclothRobe();
     fillIvyclothTunic();
+    fillLunarRaiment();
+    fillLunarVest();
+    fillMastersRobe();
+    fillMastersVest();
+    fillMysticalArmor();
+    fillMysticalRobe();
+    fillNativeRobe();
+    fillNativeVest();
+    fillOpulentRobes();
+    fillOpulentTunic();
+    fillPaganVest();
+    fillPaganWraps();
+    fillRaincallerRobes();
+    fillRaincallerVest();
+    fillRegalArmor();
     
     System.out.println(list.get(list.size() - 1).getAllItems()); 
     System.out.println(list.get(list.size() - 1));  //Still need this when adding Items
@@ -118,10 +133,241 @@ public class Chest {
         + ((double)(list.size()) / (double)(ids.length) * 100 + "%"));
   }
   
+  private static void fillRegalArmor() {
+  //  int id = 7332;
+  //  MultiBonus regalArmor = new MultiBonus("Regal Armor", id);
+  //  list.add(regalArmor);
+  }
+
+  private static void fillRaincallerVest() {
+    int id = 14190;
+    MultiBonus raincallerVest = new MultiBonus("Raincaller Vest", id);
+    raincallerVest.createIntellectTree(12, 12, 20.4);
+    raincallerVest.createSpiritTree(12, 12, 9.6);
+    raincallerVest.createStaminaTree(12, 12, 7.0);
+    
+    raincallerVest.createEagleTree(8, 8, 19.1);
+    raincallerVest.createOwlTree(8, 8, 32.2);
+    raincallerVest.createWhaleTree(8, 8, 11.7);
+    list.add(raincallerVest);
+  }
+
+  private static void fillRaincallerRobes() {
+    int id = 14192;
+    MultiBonus raincallerRobes = new MultiBonus("Raincaller Robes", id);
+    raincallerRobes.createArcaneWrathTree(17, 17, 7.4);
+    raincallerRobes.createFrozenWrathTree(17, 17, 4.1);
+    raincallerRobes.createIntellectTree(12, 12, 7.2);
+    raincallerRobes.createSpiritTree(12, 12, 8.2);
+    
+    raincallerRobes.createEagleTree(7, 8, 21.6);
+    raincallerRobes.createOwlTree(7, 8, 36.4);
+    raincallerRobes.createWhaleTree(8, 8, 15.1);
+    list.add(raincallerRobes);
+  }
+
+  private static void fillPaganWraps() {
+    int id = 14163;
+    MultiBonus paganWraps = new MultiBonus("Pagan Wraps", id);
+    paganWraps.createArcaneWrathTree(13, 13, 3.1);
+    paganWraps.createFrozenWrathTree(13, 13, 4.1);
+    paganWraps.createIntellectTree(9, 10, 8.8);
+    paganWraps.createShadowWrathTree(13, 13, 4.1);
+    paganWraps.createSpiritTree(9, 9, 3.7);
+    paganWraps.createStaminaTree(9, 9, 5.0);
+    
+    paganWraps.createEagleTree(5, 6, 22.0);
+    paganWraps.createOwlTree(5, 6, 32.2);
+    paganWraps.createWhaleTree(5, 6, 17.0);
+    list.add(paganWraps);
+  }
+
+  private static void fillPaganVest() {
+    int id = 14158;
+    MultiBonus paganVest = new MultiBonus("Pagan Vest", id);
+    paganVest.createIntellectTree(9, 9, 22.4);
+    paganVest.createSpiritTree(9, 9, 9.5);
+    paganVest.createStaminaTree(9, 9, 4.8);
+    
+    paganVest.createEagleTree(6, 6, 18.8);
+    paganVest.createOwlTree(6, 6, 31.9);
+    paganVest.createWhaleTree(6, 6, 12.6);
+    list.add(paganVest);
+  }
+
+  private static void fillOpulentTunic() {
+    int id = 14287;
+    MultiBonus opulentTunic = new MultiBonus("Opulent Tunic", id);
+    opulentTunic.createArcaneResistanceTree(24, 25, 0.3);
+    opulentTunic.createArcaneWrathTree(34, 36, 9.1);
+    opulentTunic.createFireResistanceTree(24, 24, 0.6);
+    opulentTunic.createFrostResistanceTree(24, 24, 0.2);
+    opulentTunic.createFrozenWrathTree(34, 36, 8.9);
+    opulentTunic.createIntellectTree(24, 25, 6.7);
+    opulentTunic.createNatureResistanceTree(24, 25, 0.3);
+    opulentTunic.createShadowResistanceTree(25, 25, 0.2);
+    opulentTunic.createShadowWrathTree(34, 36, 6.6);
+    opulentTunic.createSpiritTree(24, 25, 7.0);
+    opulentTunic.createStaminaTree(24, 25, 5.9);
+    
+    opulentTunic.createEagleTree(15, 16, 13.4);
+    opulentTunic.createOwlTree(15, 16, 23.8);
+    opulentTunic.createWhaleTree(15, 16, 17.0);
+    list.add(opulentTunic);
+  }
+
+  private static void fillOpulentRobes() {
+    int id = 14284;
+    MultiBonus opulentRobes = new MultiBonus("Opulent Robes", id);
+    opulentRobes.createArcaneWrathTree(34, 36, 9.4);
+    opulentRobes.createFireResistanceTree(24, 25, 0.5);
+    opulentRobes.createFrostResistanceTree(24, 24, 0.1);
+    opulentRobes.createFrozenWrathTree(34, 36, 8.1);
+    opulentRobes.createIntellectTree(24, 25, 6.1);
+    opulentRobes.createNatureResistanceTree(24, 24, 0.3);
+    opulentRobes.createShadowResistanceTree(24, 24, 0.4);
+    opulentRobes.createShadowWrathTree(34, 36, 7.2);
+    opulentRobes.createSpiritTree(24, 25, 8.1);
+    opulentRobes.createStaminaTree(24, 25, 6.7);
+    
+    opulentRobes.createEagleTree(15, 16, 12.6);
+    opulentRobes.createOwlTree(15, 16, 23.5);
+    opulentRobes.createWhaleTree(15, 16, 16.8);
+    list.add(opulentRobes);
+  }
+
+  private static void fillNativeVest() {
+    int id = 14096;
+    MultiBonus nativeVest = new MultiBonus("Native Vest", id);
+    nativeVest.createIntellectTree(4, 4, 25.0);
+    nativeVest.createSpiritTree(4, 4, 9.2);
+    nativeVest.createStaminaTree(4, 4, 4.9);
+    
+    nativeVest.createEagleTree(3, 3, 15.4);
+    nativeVest.createOwlTree(3, 3, 29.4);
+    nativeVest.createWhaleTree(3, 3, 16.1);
+    list.add(nativeVest);
+  }
+
+  private static void fillNativeRobe() {
+    int id = 14109;
+    MultiBonus nativeRobe = new MultiBonus("Native Robe", id);
+    nativeRobe.createArcaneWrathTree(6, 7, 6.5);
+    nativeRobe.createFrozenWrathTree(6, 7, 6.1);
+    nativeRobe.createIntellectTree(4, 5, 9.9);
+    nativeRobe.createShadowWrathTree(6, 7, 4.3);
+    nativeRobe.createSpiritTree(4, 5, 8.4);
+    nativeRobe.createStaminaTree(4, 5, 6.1);
+    
+    nativeRobe.createEagleTree(2, 3, 16.6);
+    nativeRobe.createOwlTree(2, 3, 26.5);
+    nativeRobe.createWhaleTree(2, 3, 15.4);
+    list.add(nativeRobe);
+  }
+
+  private static void fillMysticalRobe() {
+    int id = 10178;
+    MultiBonus mysticalRobe = new MultiBonus("Mystical Robe", id);
+    mysticalRobe.createIntellectTree(25, 25, 35.6);
+    mysticalRobe.createSpiritTree(25, 25, 3.8);
+    mysticalRobe.createStaminaTree(25, 25, 6.1);
+    
+    mysticalRobe.createEagleTree(16, 16, 15.2);
+    mysticalRobe.createOwlTree(16, 16, 28.0);
+    mysticalRobe.createWhaleTree(16, 16, 11.4);
+    list.add(mysticalRobe);
+  }
+
+  private static void fillMysticalArmor() {
+    int id = 10181;
+    MultiBonus mysticalArmor = new MultiBonus("Mystical Armor", id);
+    mysticalArmor.createArcaneResistanceTree(25, 25, 0.4);
+    mysticalArmor.createIntellectTree(25, 25, 25.4);
+    mysticalArmor.createSpiritTree(25, 25, 9.7);
+    mysticalArmor.createStaminaTree(25, 25, 7.6);
+    
+    mysticalArmor.createEagleTree(17, 17, 14.7);
+    mysticalArmor.createOwlTree(17, 17, 27.6);
+    mysticalArmor.createWhaleTree(17, 17, 14.7);
+    list.add(mysticalArmor);   
+  }
+
+  private static void fillMastersVest() {
+    int id = 10246;
+    MultiBonus mastersVest = new MultiBonus("Master's Vest", id);
+    mastersVest.createArcaneResistanceTree(29, 29, 0.1);
+    mastersVest.createArcaneWrathTree(40, 41, 7.4);
+    mastersVest.createFireResistanceTree(28, 29, 0.3);
+    mastersVest.createFrostResistanceTree(28, 29, 0.3);
+    mastersVest.createFrozenWrathTree(40, 41, 8.2);
+    mastersVest.createIntellectTree(28, 29, 7.4);
+    mastersVest.createNatureResistanceTree(29, 29, 0.1);
+    mastersVest.createShadowResistanceTree(29, 29, 0.1);
+    mastersVest.createShadowWrathTree(40, 41, 8.7);
+    mastersVest.createSpiritTree(28, 29, 5.2);
+    mastersVest.createStaminaTree(28, 29, 5.8);
+    
+    mastersVest.createEagleTree(18, 19, 18.2);
+    mastersVest.createOwlTree(18, 19, 25.0);
+    mastersVest.createWhaleTree(18, 19, 13.3);
+    list.add(mastersVest);
+  }
+
+  private static void fillMastersRobe() {
+    int id = 10254;
+    MultiBonus mastersRobe = new MultiBonus("Master's Robe", id);
+    mastersRobe.createArcaneWrathTree(40, 41, 8.8);
+    mastersRobe.createFrozenWrathTree(40, 41, 6.9);
+    mastersRobe.createIntellectTree(28, 29, 7.1);
+    mastersRobe.createShadowWrathTree(40, 41, 7.9);
+    mastersRobe.createSpiritTree(28, 29, 7.5);
+    mastersRobe.createStaminaTree(28, 29, 8.7);
+    
+    mastersRobe.createEagleTree(18, 19, 14.3);
+    mastersRobe.createOwlTree(18, 19, 24.3);
+    mastersRobe.createWhaleTree(18, 19, 14.4);
+    list.add(mastersRobe);
+  }
+
+  private static void fillLunarVest() {
+    int id = 14249;
+    MultiBonus lunarVest = new MultiBonus("Lunar Vest", id);
+    lunarVest.createIntellectTree(20, 20, 10.0);
+    lunarVest.createSpiritTree(20, 20, 8.3);
+    lunarVest.createStaminaTree(20, 20, 10.0);
+    
+    lunarVest.createEagleTree(13, 13, 19.2);
+    lunarVest.createOwlTree(13, 13, 32.5);
+    lunarVest.createWhaleTree(13, 13, 20.0);
+    list.add(lunarVest);
+  }
+
+  private static void fillLunarRaiment() {
+    int id = 14254;
+    MultiBonus lunarRaiment = new MultiBonus("Lunar Raiment", id);
+    lunarRaiment.createFrozenWrathTree(29, 29, 6.7);
+    lunarRaiment.createIntellectTree(20, 20, 6.3);
+    lunarRaiment.createSpiritTree(20, 20, 9.8);
+    
+    lunarRaiment.createEagleTree(13, 13, 17.6);
+    lunarRaiment.createOwlTree(13, 13, 33.3);
+    lunarRaiment.createWhaleTreeDiff(13, 13, 12, 13, 26.3);
+    list.add(lunarRaiment);
+  }
+
   private static void fillIvyclothTunic() {
     int id = 9791;
     MultiBonus ivyclothTunic = new MultiBonus("Ivycloth Tunic", id);
-    //TODO
+    ivyclothTunic.createArcaneWrathTree(14, 16, 3.9);
+    ivyclothTunic.createFrozenWrathTree(14, 16, 4.2);
+    ivyclothTunic.createIntellectTree(10, 11, 12.4);
+    ivyclothTunic.createShadowWrathTree(14, 16, 2.4);
+    ivyclothTunic.createSpiritTree(10, 11, 6.6);
+    ivyclothTunic.createStaminaTree(10, 11, 4.6);
+    
+    ivyclothTunic.createEagleTree(6, 7, 15.9);
+    ivyclothTunic.createOwlTree(6, 7, 37.1);
+    ivyclothTunic.createWhaleTree(6, 7, 12.9);
     list.add(ivyclothTunic);
   }
 
